@@ -1,16 +1,17 @@
 # 全局配置
 crawler:
   headless: false              # 浏览器是否无头模式
-  max_pages_per_keyword: 5     # 每个关键词最多爬几页
+  max_pages_per_keyword: 3     # 每个关键词最多爬几页
   min_delay: 3                 # 最小请求间隔(秒)
   max_delay: 8                 # 最大请求间隔(秒)
   timeout: 30000               # 页面加载超时(ms)
+  scheduler_crawler: "mtop"    # 定时任务使用的爬虫: mtop / playwright
 
 schedule:
   enabled: true
   cron: "daily 2:00"           # 每天凌晨2点执行
-  retry_count: 2
-  retry_delay: 300
+  retry_count: 2               # 失败重试次数
+  retry_delay: 300             # 重试间隔(秒)
 
 export:
   output_dir: "web/data"       # JSON输出目录

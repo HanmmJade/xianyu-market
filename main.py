@@ -23,7 +23,6 @@ def cmd_crawl(args):
     from crawler.xianyu_spider import XianyuSpider
     from storage.db import insert_records, init_db, migrate_db
 
-    # 确保数据库结构是最新的
     init_db()
     migrate_db()
 
@@ -39,8 +38,121 @@ def cmd_crawl(args):
     if records:
         inserted = insert_records(records)
         logger.info(f"完成: 抓取{len(records)}条, 新增{inserted}条")
+
+        # 自动导出
+        if args.export:
+            from storage.export import export_all
+            export_all()
+            logger.info("JSON 导出完成")
     else:
         logger.warning("未抓取到数据")
+
+
+def cmd_crawl_mtop(args):
+    """使用 mtop API 爬虫采集数据"""
+    from crawler.mtop_crawler import MtopCrawler
+    from storage.db import insert_records, init_db, migrate_db
+
+    init_db()
+    migrate_db()
+
+    keyword = args.keyword or ''
+    crawler = MtopCrawler(headless=args.headless)
+
+    async def run():
+        await crawler.start()
+        try:
+            # 确保已登录
+            if not await crawler.login_if_needed():
+                logger.error("登录失败，无法继续")
+                return []
+
+            if keyword:
+                return await crawler.crawl_all(keyword_filter=keyword)
+            else:
+                return await crawler.crawl_all()
+        finally:
+            await crawler.close()
+
+    records = asyncio.run(run())
+
+    if records:
+        inserted = insert_records(records)
+        logger.info(f"完成: 采集{len(records)}条, 新增{inserted}条")
+
+        if args.export:
+            from storage.export import export_all
+            export_all()
+            logger.info("JSON 导出完成")
+    else:
+        logger.warning("未采集到数据")
+
+
+def cmd_pipeline(args):
+    """一键执行完整管道: init-db → crawl → clean → export"""
+    from storage.db import init_db, migrate_db, insert_records, get_stats
+    from storage.export import export_all
+
+    logger.info("=" * 50)
+    logger.info("  开始执行完整数据管道")
+    logger.info("=" * 50)
+
+    # Step 1: 初始化数据库
+    logger.info("[1/4] 初始化数据库...")
+    init_db()
+    migrate_db()
+
+    # Step 2: 采集数据
+    logger.info("[2/4] 采集数据...")
+    keyword = args.keyword or ''
+
+    if args.crawler == 'mtop':
+        from crawler.mtop_crawler import MtopCrawler
+        crawler = MtopCrawler(headless=args.headless)
+
+        async def run_mtop():
+            await crawler.start()
+            try:
+                if not await crawler.login_if_needed():
+                    logger.error("登录失败")
+                    return []
+                if keyword:
+                    return await crawler.crawl_all(keyword_filter=keyword)
+                else:
+                    return await crawler.crawl_all()
+            finally:
+                await crawler.close()
+
+        records = asyncio.run(run_mtop())
+    else:
+        from crawler.xianyu_spider import XianyuSpider
+        login_mode = args.login or 'auto'
+        spider = XianyuSpider(headless=args.headless, login_mode=login_mode)
+        if keyword:
+            records = asyncio.run(spider.crawl_all(keyword_filter=keyword))
+        else:
+            records = asyncio.run(spider.crawl_all())
+
+    # Step 3: 入库
+    logger.info("[3/4] 数据入库...")
+    if records:
+        inserted = insert_records(records)
+        logger.info(f"  采集 {len(records)} 条，新增 {inserted} 条")
+    else:
+        logger.warning("  未采集到数据")
+
+    # Step 4: 导出
+    logger.info("[4/4] 导出 JSON...")
+    export_all()
+
+    # 统计
+    stats = get_stats()
+    logger.info("=" * 50)
+    logger.info(f"  管道执行完成")
+    logger.info(f"  总记录: {stats['total_records']}")
+    logger.info(f"  型号数: {stats['total_models']}")
+    logger.info(f"  上次爬取: {stats['last_crawled'] or '-'}")
+    logger.info("=" * 50)
 
 
 def cmd_export(args):
@@ -69,6 +181,15 @@ def cmd_serve(args):
             pass
 
 
+def cmd_serve_api(args):
+    """启动 FastAPI 后端服务"""
+    import uvicorn
+    host = args.host or "0.0.0.0"
+    port = args.port or 8000
+    logger.info(f"FastAPI 服务: http://{host}:{port}")
+    uvicorn.run("server.main:app", host=host, port=port, reload=args.reload)
+
+
 def cmd_schedule(args):
     from scheduler.runner import start_scheduler
     start_scheduler()
@@ -92,8 +213,8 @@ def cmd_stats(args):
 
 def cmd_clean(args):
     """对已有数据执行清洗（不重新爬取）"""
-    from storage.db import get_all_models, get_model_detail, update_record_condition
-    from crawler.cleaner import clean_record, is_garbage, classify_model, infer_condition
+    from storage.db import get_all_models, get_model_detail
+    from crawler.cleaner import is_garbage, classify_model, infer_condition
 
     models = get_all_models()
     if not models:
@@ -125,14 +246,14 @@ def cmd_clean(args):
             # 脏数据检测
             is_bad, reason = is_garbage(title)
             if is_bad:
-                print(f"  ❌ ¥{price} 垃圾数据: {title[:30]}... ({reason})")
+                print(f"  X ¥{price} 垃圾数据: {title[:30]}... ({reason})")
                 removed_count += 1
                 continue
 
             # 型号过滤
             is_match, match_reason = classify_model(title, model_name)
             if not is_match:
-                print(f"  ❌ ¥{price} 型号不符: {title[:30]}... ({match_reason})")
+                print(f"  X ¥{price} 型号不符: {title[:30]}... ({match_reason})")
                 removed_count += 1
                 continue
 
@@ -141,17 +262,8 @@ def cmd_clean(args):
             new_condition = cond['label']
 
             if old_condition != new_condition:
-                print(f"  🔄 ¥{price} 成色修正: {old_condition or '未标'} → {new_condition} ({cond['score']}分)")
-                for e in cond['evidence']:
-                    print(f"      └─ {e}")
+                print(f"  ~ ¥{price} 成色修正: {old_condition or '未标'} -> {new_condition} ({cond['score']}分)")
                 mismatch_count += 1
-
-            # 更新数据库中的成色
-            if hasattr(update_record_condition, '__call__'):
-                try:
-                    update_record_condition(r.get('id'), new_condition, cond)
-                except:
-                    pass  # 如果数据库不支持更新，跳过
 
             cleaned_count += 1
 
@@ -164,7 +276,6 @@ def cmd_clean(args):
     print(f"全部清洗完成: 保留{total_cleaned}条, 移除{total_removed}条, 成色修正{total_mismatch}条")
     print(f"{'='*50}")
 
-    # 重新导出
     if args.export:
         print("\n重新导出JSON...")
         from storage.export import export_all
@@ -179,20 +290,46 @@ def main():
     # init-db
     sub.add_parser('init-db', help='初始化数据库')
 
-    # crawl
-    p = sub.add_parser('crawl', help='爬取数据')
+    # crawl (Playwright 方案)
+    p = sub.add_parser('crawl', help='使用 Playwright 爬虫采集数据')
     p.add_argument('--keyword', '-k', help='指定关键词(如 "天斧88D PRO")')
     p.add_argument('--headless', action='store_true', help='无头模式')
     p.add_argument('--login', '-l', choices=['auto', 'cookie', 'qrcode'],
-                   default='auto', help='登录方式: auto(先Cookie再扫码) / cookie / qrcode')
+                   default='auto', help='登录方式')
+    p.add_argument('--no-export', dest='export', action='store_false',
+                   help='不自动导出JSON')
+    p.set_defaults(export=True)
+
+    # crawl-mtop (mtop API 方案)
+    p = sub.add_parser('crawl-mtop', help='使用 mtop API 爬虫采集数据')
+    p.add_argument('--keyword', '-k', help='指定关键词')
+    p.add_argument('--headless', action='store_true', help='无头模式')
+    p.add_argument('--no-export', dest='export', action='store_false',
+                   help='不自动导出JSON')
+    p.set_defaults(export=True)
+
+    # pipeline (一键完整管道)
+    p = sub.add_parser('pipeline', help='一键执行: init-db -> crawl -> export')
+    p.add_argument('--keyword', '-k', help='指定关键词')
+    p.add_argument('--headless', action='store_true', help='无头模式')
+    p.add_argument('--crawler', '-c', choices=['playwright', 'mtop'],
+                   default='mtop', help='爬虫方案 (默认: mtop)')
+    p.add_argument('--login', '-l', choices=['auto', 'cookie', 'qrcode'],
+                   default='auto', help='登录方式 (Playwright方案)')
 
     # export
     sub.add_parser('export', help='导出JSON给前端')
 
-    # serve
-    p = sub.add_parser('serve', help='本地预览网站')
+    # serve (静态文件)
+    p = sub.add_parser('serve', help='本地预览静态网站')
     p.add_argument('--host', default='0.0.0.0')
     p.add_argument('--port', type=int, default=8088)
+
+    # serve-api (FastAPI)
+    p = sub.add_parser('serve-api', help='启动 FastAPI 后端')
+    p.add_argument('--host', default='0.0.0.0')
+    p.add_argument('--port', type=int, default=8000)
+    p.add_argument('--reload', action='store_true', help='开发模式热重载')
 
     # schedule
     sub.add_parser('schedule', help='启动定时调度')
@@ -212,8 +349,11 @@ def main():
     handlers = {
         'init-db': cmd_init_db,
         'crawl': cmd_crawl,
+        'crawl-mtop': cmd_crawl_mtop,
+        'pipeline': cmd_pipeline,
         'export': cmd_export,
         'serve': cmd_serve,
+        'serve-api': cmd_serve_api,
         'schedule': cmd_schedule,
         'stats': cmd_stats,
         'clean': cmd_clean,
