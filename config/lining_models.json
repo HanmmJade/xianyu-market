@@ -1,0 +1,22 @@
+[
+  {"brand": "李宁", "series": "风刃", "official_name": "风刃900", "model_code": "WINDSTORM 900", "aliases": ["风刃900", "WS900"]},
+  {"brand": "李宁", "series": "风刃", "official_name": "风刃900i", "model_code": "WINDSTORM 900i", "aliases": ["风刃900i", "WS900i"]},
+  {"brand": "李宁", "series": "风刃", "official_name": "风刃900C", "model_code": "WINDSTORM 900C", "aliases": ["风刃900C", "WS900C"]},
+  {"brand": "李宁", "series": "风刃", "official_name": "风刃700", "model_code": "WINDSTORM 700", "aliases": ["风刃700", "WS700"]},
+  {"brand": "李宁", "series": "风刃", "official_name": "风刃500", "model_code": "WINDSTORM 500", "aliases": ["风刃500", "WS500"]},
+  {"brand": "李宁", "series": "雷霆", "official_name": "雷霆80", "model_code": "THUNDER 80", "aliases": ["雷霆80", "雷霆80PRO"]},
+  {"brand": "李宁", "series": "雷霆", "official_name": "雷霆90", "model_code": "THUNDER 90", "aliases": ["雷霆90"]},
+  {"brand": "李宁", "series": "雷霆", "official_name": "雷霆100", "model_code": "THUNDER 100", "aliases": ["雷霆100"]},
+  {"brand": "李宁", "series": "战戟", "official_name": "战戟8000", "model_code": "HALBERD 8000", "aliases": ["战戟8000", "H8000"]},
+  {"brand": "李宁", "series": "战戟", "official_name": "战戟800", "model_code": "HALBERD 800", "aliases": ["战戟800", "H800"]},
+  {"brand": "李宁", "series": "战戟", "official_name": "战戟III", "model_code": "HALBERD III", "aliases": ["战戟3", "战戟III"]},
+  {"brand": "李宁", "series": "突袭", "official_name": "突袭9", "model_code": "ASSAULT 9", "aliases": ["突袭9", "突击9"]},
+  {"brand": "李宁", "series": "突袭", "official_name": "突袭7", "model_code": "ASSAULT 7", "aliases": ["突袭7", "突击7"]},
+  {"brand": "李宁", "series": "能量", "official_name": "能量70", "model_code": "ENERGY 70", "aliases": ["能量70"]},
+  {"brand": "李宁", "series": "能量", "official_name": "能量75", "model_code": "ENERGY 75", "aliases": ["能量75"]},
+  {"brand": "李宁", "series": "锋影", "official_name": "锋影800", "model_code": "BLADE 800", "aliases": ["锋影800"]},
+  {"brand": "李宁", "series": "锋影", "official_name": "锋影900", "model_code": "BLADE 900", "aliases": ["锋影900"]},
+  {"brand": "李宁", "series": "风动", "official_name": "风动9000", "model_code": "WIND 9000", "aliases": ["风动9000"]},
+  {"brand": "李宁", "series": "风动", "official_name": "风动7000", "model_code": "WIND 7000", "aliases": ["风动7000"]},
+  {"brand": "李宁", "series": "雲霆", "official_name": "雲霆", "model_code": "YUN TING", "aliases": ["雲霆"]}
+]

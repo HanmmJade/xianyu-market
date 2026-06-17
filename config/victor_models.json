@@ -1,0 +1,23 @@
+[
+  {"brand": "VICTOR", "series": "THRUSTER", "official_name": "Thruster F C", "model_code": "TK-F C"},
+  {"brand": "VICTOR", "series": "THRUSTER", "official_name": "Thruster F Claw", "model_code": "TK-F Claw"},
+  {"brand": "VICTOR", "series": "THRUSTER", "official_name": "Thruster K F C", "model_code": "TK-K F C"},
+  {"brand": "VICTOR", "series": "THRUSTER", "official_name": "Thruster Ryuga", "model_code": "TK-Ryuga"},
+  {"brand": "VICTOR", "series": "THRUSTER", "official_name": "Thruster Ryuga II", "model_code": "TK-Ryuga II"},
+  {"brand": "VICTOR", "series": "THRUSTER", "official_name": "Thruster HMR", "model_code": "TK-HMR"},
+  {"brand": "VICTOR", "series": "THRUSTER", "official_name": "Thruster 9000", "model_code": "TK-9000"},
+  {"brand": "VICTOR", "series": "JETSPEED", "official_name": "Jetspeed S 10", "model_code": "JS-10"},
+  {"brand": "VICTOR", "series": "JETSPEED", "official_name": "Jetspeed S 12", "model_code": "JS-12"},
+  {"brand": "VICTOR", "series": "JETSPEED", "official_name": "Jetspeed S 12 II", "model_code": "JS-12 II"},
+  {"brand": "VICTOR", "series": "JETSPEED", "official_name": "Jetspeed F 9", "model_code": "JS-F9"},
+  {"brand": "VICTOR", "series": "JETSPEED", "official_name": "Jetspeed F 9 II", "model_code": "JS-F9 II"},
+  {"brand": "VICTOR", "series": "AURASPEED", "official_name": "Auraspeed 90S", "model_code": "ARS-90S"},
+  {"brand": "VICTOR", "series": "AURASPEED", "official_name": "Auraspeed 90K", "model_code": "ARS-90K"},
+  {"brand": "VICTOR", "series": "AURASPEED", "official_name": "Auraspeed 100X", "model_code": "ARS-100X"},
+  {"brand": "VICTOR", "series": "AURASPEED", "official_name": "Auraspeed 9000", "model_code": "ARS-9000"},
+  {"brand": "VICTOR", "series": "DRIVEX", "official_name": "Drivex 9X", "model_code": "DX-9X"},
+  {"brand": "VICTOR", "series": "DRIVEX", "official_name": "Drivex 10", "model_code": "DX-10"},
+  {"brand": "VICTOR", "series": "CHALLENGER", "official_name": "Challenger 8500", "model_code": "C8500"},
+  {"brand": "VICTOR", "series": "CHALLENGER", "official_name": "Challenger II", "model_code": "CII"},
+  {"brand": "VICTOR", "series": "EXPLORER", "official_name": "Explorer 7900", "model_code": "EX7900"}
+]

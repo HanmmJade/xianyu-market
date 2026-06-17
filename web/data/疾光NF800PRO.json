@@ -1,0 +1,625 @@
+{
+  "model": "疾光NF800PRO",
+  "total_sales": 67,
+  "by_condition": [
+    {
+      "condition": "",
+      "count": 19,
+      "avg_price": 1093.0,
+      "min_price": 569.0,
+      "max_price": 5000.0,
+      "avg_days": null
+    },
+    {
+      "condition": "全新",
+      "count": 15,
+      "avg_price": 835.0,
+      "min_price": 245.0,
+      "max_price": 1350.0,
+      "avg_days": null
+    },
+    {
+      "condition": "9新",
+      "count": 5,
+      "avg_price": 809.0,
+      "min_price": 450.0,
+      "max_price": 1150.0,
+      "avg_days": null
+    },
+    {
+      "condition": "8新",
+      "count": 2,
+      "avg_price": 665.0,
+      "min_price": 380.0,
+      "max_price": 950.0,
+      "avg_days": null
+    },
+    {
+      "condition": "95新",
+      "count": 25,
+      "avg_price": 601.0,
+      "min_price": 107.0,
+      "max_price": 1250.0,
+      "avg_days": null
+    },
+    {
+      "condition": "8新以下",
+      "count": 1,
+      "avg_price": 359.0,
+      "min_price": 359.0,
+      "max_price": 359.0,
+      "avg_days": null
+    }
+  ],
+  "condition_trends": {},
+  "recent_records": [
+    {
+      "price": 707.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "YONEX尤尼克斯疾光800pro，SP版羽毛球拍，日本产， 拍杆有PBSI认证标，手胶红色，拍框有两处小掉漆，整体成色还行，没修没塌，线网都在，适合平时打球用，挥拍轻快，弹性不错，正品保证。BG80的26磅黑线。\n\n支持自提，价格可聊，喜欢的朋友私聊看细节图～",
+      "condition_evidence": []
+    },
+    {
+      "price": 999.0,
+      "condition": "95新",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯nf800pro jp版本（去底胶） 规格：4ug5\n成色:95新，去底胶，有轻微磨损痕迹。闲置\n穿线情况:首线exbolt63线 26磅\n承诺:保证正品，保证无修复无塌陷\n爽快包邮",
+      "condition_evidence": []
+    },
+    {
+      "price": 688.0,
+      "condition": "全新",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "型号：nf800pro 规格：4ug5 版本：ch 实物为准：型号、规格、成色一律以实拍+沟通确认，口头描述仅供参考。正品二手羽拍统一翻新补漆、更换全新护线管，默认9新成色。拍框无塌陷、无裂纹、无暗伤，支持X光验拍，买得安心又省心小。翻新拍不会出现磕碰，有磕碰会...",
+      "condition_evidence": []
+    },
+    {
+      "price": 850.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯nf800pro4ug6sp 瑕疵私信看 bg80线",
+      "condition_evidence": []
+    },
+    {
+      "price": 900.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "4ug5贴纸瑕nf800pro，ch版本，26磅科组纳63线 。未掉漆，只是表面的一层保护膜掉了。非诚勿扰。",
+      "condition_evidence": []
+    },
+    {
+      "price": 666.0,
+      "condition": "全新",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "全新YONEX NF800PRO，88DPRO，99宝石蓝， 正品保证！全是4U5规格，可卖可换",
+      "condition_evidence": []
+    },
+    {
+      "price": 1000.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "NF800pro 极光700pro 4Ug5 首线无暇 27 磅exbolt63",
+      "condition_evidence": []
+    },
+    {
+      "price": 901.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯NF800PRO ，3ug5己去底胶  CH版本，3 u才是百分百的疾光800p，打感扎实速度快下压给力，上手难度也不高。首线打了几次自剪，现在二线李宁N65，27磅暂时没有打过，用得少，仅有击球瑕疵和捡球瑕疵，无塌无修，原装拍套还在。二手拍售出不退不换，艺术家大刀到手刀勿扰，可先看本人评价，认可后再谈才有效率。",
+      "condition_evidence": []
+    },
+    {
+      "price": 839.0,
+      "condition": "9新",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯羽毛球拍 疾光800pro Nf800pro，4ug5规格！ch版本，9新，磕碰掉漆见图片，底胶去了，带线66n，26磅，速度拍，非常好打，整体很新！   保正品保正品保正品！重要事情说三遍保证无塌陷无修复无内伤。  非偏远地区包顺丰，二手球拍售出非真假不退不换",
+      "condition_evidence": []
+    },
+    {
+      "price": 980.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800PRO羽毛球拍，4U，有轻微划痕，无修，细 节如图，新穿的尤尼95线，包邮，可自提。不议价，不退换。",
+      "condition_evidence": []
+    },
+    {
+      "price": 1000.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800PRO羽毛球拍 尤尼克斯疾光800PRO羽毛球拍，蓝黑配色，4UG5规格，网线完好，拍框外观无明显损伤，适合进阶或专业玩家使用。",
+      "condition_evidence": []
+    },
+    {
+      "price": 1080.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800Pro羽毛球拍，成色还可以，正常用痕迹，功 能都好用，手感不错，挥拍顺手，适合喜欢速度的球友。\n4U  G5 首线 没咋玩了",
+      "condition_evidence": []
+    },
+    {
+      "price": 1000.0,
+      "condition": "全新",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "YONEX NANOFLARE 800PRO 26g 4U5 国版\n几乎全新正品，拉的25磅的线\n手胶新 拍面干净\n带电子质保卡\n包邮 支持自提\n价格好说",
+      "condition_evidence": []
+    },
+    {
+      "price": 1350.0,
+      "condition": "全新",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "【型号】：800pro 【规格】：CH 4ug5\n【成色】：全新（包正 包无修复 包无内伤）\n【价格】：1388\n全国回收各种二手高端拍，成色越好我价格越高，可以带报价单来，深圳市内均可上门收拍，线下有实体店可以试打，支持置换！",
+      "condition_evidence": []
+    },
+    {
+      "price": 5000.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "个人自用全套游戏主机 i5-12490F+RTX5060 微 星主板带原盒 非矿机\n\n整机完整配置（实拍截图全部上传，所见即所得）\n\n✅CPU：Intel i5-12490F 盒装正品，原装包装盒齐全\n✅主板：微星PRO H610M-S WIFI DDR4 带原装彩盒，自带无线WiFi\n✅内存：16GB 双通道内存\n✅固态：Amoi ZL800 512GB NVMe M.2高速固态\n✅显卡：RTX 5060 独立游戏显卡，原包装盒完整保留\n✅机箱：微星侧透RGB电竞机箱，多把ARGB散热风扇，颜值散热双在线\n✅系统：预装Win11专业版，驱动、常用运行库全部装好，插上显示器直接开机即用\n\n机器详细说明\n\n1. 全套配件CPU、主板、显卡全部原装包装盒都在，组装没多久，2026年1月新装自用机，使用时间很短，成色实拍无修图；\n\n2. 纯家用娱乐主机，从来不挖矿、不工作室24小时不间断挂机，无超频、无暗病、无维修，硬件健康度拉满；\n\n3. 微星品牌整套平台，主板自带WiFi，不用插网线，台式机也能无线联网；侧透机箱RGB灯光效果炫酷，风道合理，长时间游戏温度稳定，噪音小。\n\n游戏&生产力性能\n\n• 网游：LOL、CS2、永劫无间、绝地求生、原神、无畏契约全部开满高画质，帧率极高流畅运行；\n\n• 单机3A：赛博朋克2077、黑神话悟空、星空等大作高画质+光追流畅游玩；\n\n• 生产力：PR/AE视频剪辑、CAD制图、模拟器多开、网课办公、直播推流全能胜任。\n\n交易说明\n\n整套整机打包出售，不单拆配件。\n同城支持上门自提，当场拷机测试，随便跑压力测试；外地多层泡沫加固打包发货，全程保价运输，签收前务必验货，签收后不以个人使用感受为由退换。\n实拍所有图片、设备管理器、硬件原盒全部实拍上传，拒绝套路，诚心出，非商家贩子个人自用机。",
+      "condition_evidence": []
+    },
+    {
+      "price": 660.0,
+      "condition": "全新",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "800pro ch 4ug5 [1]品相说 仅做外观翻新+更换全新护线管，无内伤、无断补； 原厂工艺痕迹与细微外观小瑕疵，不属于质量问题，不在售后范围。  [2]交易须知 二手运动器材特殊性，一经售出非真假断裂塌陷不退不换，不接受无理由退换。  [3]售后&回...",
+      "condition_evidence": []
+    },
+    {
+      "price": 816.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800pro国行版本3ug5 感兴趣的话点“我想要”和我私聊吧～",
+      "condition_evidence": []
+    },
+    {
+      "price": 1100.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800 Pro羽毛球拍 尤尼克斯疾光800 Pro羽毛球拍，4U5黄金规格，首线26磅XB63，拍框无塌陷无修复，线床紧实，手胶未换但整体保存完好，仅轻微使用痕迹，无明显磕碰。",
+      "condition_evidence": []
+    },
+    {
+      "price": 640.0,
+      "condition": "全新",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "疾光800pro，轻微磕碰有塌陷部份已标注，全新护线管 感兴趣的话点“我想要”和我私聊吧～",
+      "condition_evidence": []
+    },
+    {
+      "price": 1100.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯800lt 5UG5 CH版 一处小裂缝已完成修复正常使用 \n细节可拍视频 正品保证",
+      "condition_evidence": []
+    },
+    {
+      "price": 1200.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800，首线无暇，4UG5，SP版，去底。 感兴趣的话点“我想要”和我私聊吧～",
+      "condition_evidence": []
+    },
+    {
+      "price": 880.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯   疾光800 整体成色不错  jp版\n贵重物品不包邮   顺丰发货\n运费20  球拍保证正品\n提供拉线服务 价格65\n有意可直接拍下  图片已呈现所有状态  所见即所得  \n发货前会有整体视频确认，确认无误才会发货，不接受任何形式的到手刀",
+      "condition_evidence": []
+    },
+    {
+      "price": 585.0,
+      "condition": "全新",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "全新尤尼克斯疾光NF-800 TOUR  4U5CH版，全新 无瑕有质保可登记，裸拍保正品可当面验收！注：商品售出除正品和质量问题不退不换！",
+      "condition_evidence": []
+    },
+    {
+      "price": 630.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "疾光800 nf800 3ug5  已过x光 无修无翻新无内 伤  主要3个大掉漆  其他一点芝麻瑕 保证正品 包邮 可以小刀",
+      "condition_evidence": []
+    },
+    {
+      "price": 640.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "YONEX疾光800，正品无修复  无裂痕 无塌陷，瑕疵已拍 ，顺丰包邮，可自提，有意者私聊",
+      "condition_evidence": []
+    },
+    {
+      "price": 720.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "疾光800，无瑕，4ug5，保正品无修复无塌陷，拍框漆水翻新 过，爽快可包邮",
+      "condition_evidence": []
+    },
+    {
+      "price": 568.88,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "疾光800 4u 无修无塌翻新拍 送全套护线管换新，保真 无修无塌，付款提供带钢号x光视频 放大镜，事妈，到手刀勿扰 售出不退不换，不接到手刀",
+      "condition_evidence": []
+    },
+    {
+      "price": 698.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "Yonex4UG5 CH版疾光800老色 [钉子]成色所有已经拍出，多数为米粒瑕，目前二线已剪 [红圆]保正，细节已经拍出，不接大刀 [闪亮]顺丰包邮送保价，目前交易百分百好评，感兴趣可以私哦 [火]特殊物品除真假问题外，售出不退不换 关联词：尤尼克斯 羽毛球拍 疾光 YONEX",
+      "condition_evidence": []
+    },
+    {
+      "price": 700.0,
+      "condition": "全新",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "型号nf800pro 规格：4u g5 版本：jp 具体型号、规格、成色以实拍和沟通确认为准。 认真挑选每一支正品二手球拍，外观已做翻新处理，翻新=补漆美化外观，并已更换全新护线管，细节状态建议下单前确认。 准备入手前可查看实拍细节，拍框无塌陷、无裂纹、无暗伤...",
+      "condition_evidence": []
+    },
+    {
+      "price": 1150.0,
+      "condition": "全新",
+      "condition_claimed": "全新",
+      "condition_score": 100,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800pro羽毛球拍，4U，深绿色，线下实体店1 890买的，全新未用，膜都没撕！可视频看细节！正品保证，质量放心，适合喜欢羽毛球的朋友～支持自提，外地可邮寄，价格可聊，喜欢私聊！",
+      "condition_evidence": [
+        "全新/未使用"
+      ]
+    },
+    {
+      "price": 888.0,
+      "condition": "全新",
+      "condition_claimed": "全新",
+      "condition_score": 100,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800pro，4ug5，jp版本，正品保障随便鉴 定！无修复无裂无塌陷！实物实拍！成色如图所见！基本全新无暇！",
+      "condition_evidence": [
+        "全新/未使用"
+      ]
+    },
+    {
+      "price": 1150.0,
+      "condition": "9新",
+      "condition_claimed": "",
+      "condition_score": 89,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "疾光800pro，日版4ug5仅试打，无任何瑕疵，xb63线 26/27磅，已去底，带原装拍套。",
+      "condition_evidence": [
+        "去底胶(-1分)"
+      ]
+    },
+    {
+      "price": 1066.0,
+      "condition": "95新",
+      "condition_claimed": "",
+      "condition_score": 90,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800pro羽毛球拍 JP版 尤尼克斯疾光800pro球拍，JP版本，4U5规格，拍杆刻有编号3552 S，表面有正常使用痕迹，无明显断点或塌陷，底胶已去除，线已穿好。",
+      "condition_evidence": []
+    },
+    {
+      "price": 988.0,
+      "condition": "95新",
+      "condition_claimed": "95新",
+      "condition_score": 90,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯 疾光800pro ch版本 4ug5规格 95新 刚拉的bg80线 27磅 瑕疵仅拍头细微击球瑕 图片已拍出 几乎看不出来 整体成色很新 保证正品无修复无塌陷 顺丰到付",
+      "condition_evidence": []
+    },
+    {
+      "price": 999.0,
+      "condition": "95新",
+      "condition_claimed": "",
+      "condition_score": 90,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯 疾光800pro 4ug6稀有规格 新 瑕疵仅拍头 轻微击球瑕 图片已拍出 几乎看不出来 整体成色很新 保证正品无修复无塌陷 顺丰到付",
+      "condition_evidence": []
+    },
+    {
+      "price": 1228.0,
+      "condition": "全新",
+      "condition_claimed": "全新",
+      "condition_score": 100,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "YONEX疾光800pro 4u5规格 全新无暇 支持任何角度拍摄可自行登记质保 ch版本",
+      "condition_evidence": [
+        "全新/未使用"
+      ]
+    },
+    {
+      "price": 849.0,
+      "condition": "95新",
+      "condition_claimed": "",
+      "condition_score": 90,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800pro，ch4ug5，随便鉴定！无修复无裂 无塌陷！实物实拍图片，屠龙刀勿扰，细节可私 nf800pro",
+      "condition_evidence": []
+    },
+    {
+      "price": 900.0,
+      "condition": "95新",
+      "condition_claimed": "",
+      "condition_score": 90,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "YONEX 尤尼克斯疾光800Pro 3UG5，SP版 二线无暇，没有磕碰没有掉漆，无塌无修，保证正品 目前是自己配的AB线，26磅",
+      "condition_evidence": []
+    },
+    {
+      "price": 707.0,
+      "condition": "9新",
+      "condition_claimed": "",
+      "condition_score": 85,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "YONEX尤尼克斯疾光800pro，SP版羽毛球拍，日本产， 拍杆有PBSI认证标，手胶红色，拍框有两处小掉漆，整体成色还行，没修没塌，线网都在，适合平时打球用，挥拍轻快，弹性不错，正品保证。BG80的26磅黑线。支持自提，价格可聊，喜欢的朋友私聊看细节图～",
+      "condition_evidence": [
+        "有掉漆(-5分)"
+      ]
+    },
+    {
+      "price": 901.0,
+      "condition": "9新",
+      "condition_claimed": "",
+      "condition_score": 89,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯NF800PRO ，3ug5己去底胶 CH版本，3 u才是百分百的疾光800p，打感扎实速度快下压给力，上手难度也不高。首线打了几次自剪，现在二线李宁N65，27磅暂时没有打过，用得少，仅有击球瑕疵和捡球瑕疵，无塌无修，原装拍套还在。二手拍售出不退不换，艺术家大刀到手刀勿扰，可先看本人评价，认可后再谈才有效率。",
+      "condition_evidence": [
+        "去底胶(-1分)"
+      ]
+    },
+    {
+      "price": 800.0,
+      "condition": "95新",
+      "condition_claimed": "",
+      "condition_score": 90,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800Pro ，代友出，瑕疵少，可以看视频确认， 保证正品无修发快递不退不换，拒绝一切理由到手刀",
+      "condition_evidence": []
+    },
+    {
+      "price": 850.0,
+      "condition": "全新",
+      "condition_claimed": "全新",
+      "condition_score": 100,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800pro 4ug6 sp版，首线全新，法国前 过x光确认无塌陷修复，到手后 非真假问题不退不换，顺丰到付。",
+      "condition_evidence": [
+        "全新/未使用",
+        "已过X光验证(+2分)"
+      ]
+    },
+    {
+      "price": 499.0,
+      "condition": "95新",
+      "condition_claimed": "",
+      "condition_score": 90,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "疾光800pro 4ug5 一处裂换个防塌 护线钉应该还可以 使用 后期需要修复 整体成色还可以",
+      "condition_evidence": []
+    },
+    {
+      "price": 380.0,
+      "condition": "8新",
+      "condition_claimed": "",
+      "condition_score": 65,
+      "condition_severe": true,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800pro断拍，一处断点，CH版本，3UG5， 成色如图！",
+      "condition_evidence": [
+        "有断裂(-25分)"
+      ]
+    },
+    {
+      "price": 239.0,
+      "condition": "95新",
+      "condition_claimed": "",
+      "condition_score": 90,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "疾光800PRO顶级全碳素羽毛球拍yy速度进攻拍 所有图片均为羽云实拍图，实物展示，货到就是图片所示 疾光800PRO是一款非常帅气的速度进攻拍，破风拍框的设计，挥速超快，连续进攻非常丝滑。 球拍采用二次成型内发泡科技，内发泡填充，增大了拍框的韧性，有减震效果。二次成型技术，保留了...",
+      "condition_evidence": []
+    },
+    {
+      "price": 449.0,
+      "condition": "95新",
+      "condition_claimed": "",
+      "condition_score": 90,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "疾光800pro复刻 全能速度旗舰 ✅ 顶配1:1复刻，升级版速度拍 ✅ 高弹细中杆，挥速极速、平抽连贯炸裂 ✅ 强化破风框，抗扭不飘、甜区容错超高 ✅ 快节奏双打通吃，可快攻可控球 进阶速度党首选，不挑打法、实战巨好用！ 保证最顶版本！图片均由本人实拍！ ...",
+      "condition_evidence": []
+    },
+    {
+      "price": 239.0,
+      "condition": "95新",
+      "condition_claimed": "",
+      "condition_score": 90,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "（免费试打）碳素羽毛球拍疾光800pro疾光速度进攻型羽毛球 拍，无标羽毛球拍 到手不满意可直接退回，退货有运费险！！！ 参数，材质，工艺全部对标，可免费试打3个月，正常使用瑕不影响退货，三月内可以随时退~~ 适合中前场封网，接杀，速度，进攻型羽毛球拍。质保30磅。 1. 理想使用者： . ...",
+      "condition_evidence": []
+    },
+    {
+      "price": 120.0,
+      "condition": "95新",
+      "condition_claimed": "",
+      "condition_score": 90,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "【疾光800pro】 复刻全碳素4ug5超轻进攻型单拍 ⭐完美主义者慎拍，复刻版非原厂 ⭐诚信交易，所见即所得，可以直接拍下，当天发货，私聊备注磅数～ 喜欢的宝宝们可以直接拍下，爽快的买家送拍套和手胶哦[招财猫][招财猫][招财猫] #全碳素羽毛球拍 #超轻羽...",
+      "condition_evidence": []
+    },
+    {
+      "price": 159.0,
+      "condition": "95新",
+      "condition_claimed": "95新",
+      "condition_score": 90,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "疾光800pro 我们球拍主打高端，官网的品质，手感细节各方面都跟官网一样，1比1精定拍子，区别就是手感！百洛碳对标原版百洛碳还原%95打感包拉线（➕拉好95 65 80线、手胶拍套）",
+      "condition_evidence": []
+    },
+    {
+      "price": 468.0,
+      "condition": "95新",
+      "condition_claimed": "",
+      "condition_score": 90,
+      "condition_severe": false,
+      "sold_time": "",
+      "days_to_sell": null,
+      "title": "尤尼克斯疾光800pro 4ug5黄金规格 修复拍 修复拍 修复拍 一处修复 修复位置记不清在哪里了 目前穿李宁n65线 25-26磅左右 手柄上有些残留底胶 双线控已更换防塌陷护线管进行保护 整体成色不错 全拍基本上都是一些使用痕迹 已用视频形式展示出来了 图片只能看个大概 售出还会拍细节图或视频进行核对 没有拍套 保正品 顺丰到付",
+      "condition_evidence": []
+    }
+  ],
+  "exported_at": "2026-06-14T23:03:36.291969"
+}

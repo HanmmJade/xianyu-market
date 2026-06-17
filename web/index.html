@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>球拍行情价 — 闲鱼二手市场价格监控</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .card { transition: transform 0.15s, box-shadow 0.15s; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+  .price-up { color: #ef4444; }
+  .price-down { color: #22c55e; }
+  .search-input:focus { outline: none; box-shadow: 0 0 0 3px rgba(59,130,246,0.3); }
+  .tag { cursor: pointer; transition: all 0.15s; }
+  .tag:hover, .tag.active { background: #3b82f6; color: white; }
+  .loading { display: flex; align-items: center; justify-content: center; min-height: 200px; }
+  .spinner { width: 40px; height: 40px; border: 4px solid #e5e7eb; border-top-color: #3b82f6; border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+<!-- Header -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <h1 class="text-xl font-bold text-gray-800">🏸 球拍行情价</h1>
+      <span class="text-sm text-gray-400" id="update-time"></span>
+    </div>
+    <!-- Search -->
+    <div class="mt-3 relative">
+      <input id="search" type="text" placeholder="搜索球拍型号..."
+             class="search-input w-full px-4 py-2.5 rounded-lg border border-gray-200 bg-gray-50 text-sm">
+      <svg class="absolute right-3 top-3 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+      </svg>
+    </div>
+    <!-- Brand Tags -->
+    <div class="mt-3 flex gap-2 flex-wrap" id="brand-tags">
+      <span class="tag active px-3 py-1 rounded-full text-xs bg-gray-100 text-gray-600" data-brand="all">全部</span>
+    </div>
+  </div>
+</header>
+
+<!-- Content -->
+<main class="max-w-6xl mx-auto px-4 py-6">
+  <div id="loading" class="loading"><div class="spinner"></div></div>
+  <div id="content" style="display:none">
+    <!-- Stats Bar -->
+    <div class="grid grid-cols-3 gap-4 mb-6" id="stats-bar"></div>
+    <!-- Model Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="model-grid"></div>
+  </div>
+  <div id="empty" style="display:none" class="text-center py-20 text-gray-400">
+    <p class="text-4xl mb-4">🏸</p>
+    <p>暂无数据，请先运行爬虫</p>
+    <code class="mt-2 block text-sm">python main.py crawl --all && python main.py export</code>
+  </div>
+</main>
+
+<script>
+let allData = [];
+let currentBrand = 'all';
+
+async function loadData() {
+  try {
+    const resp = await fetch('data/index.json');
+    if (!resp.ok) throw new Error('no data');
+    allData = await resp.json();
+
+    const statsResp = await fetch('data/stats.json');
+    const stats = statsResp.ok ? await statsResp.json() : null;
+
+    renderStats(stats);
+    renderBrands();
+    renderCards();
+
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+    document.getElementById('update-time').textContent =
+      stats?.last_crawled ? `更新: ${stats.last_crawled.slice(0,16)}` : '';
+  } catch(e) {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('empty').style.display = 'block';
+  }
+}
+
+function renderStats(stats) {
+  if (!stats) return;
+  const bar = document.getElementById('stats-bar');
+  bar.innerHTML = `
+    <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+      <div class="text-2xl font-bold text-blue-600">${stats.total_models || 0}</div>
+      <div class="text-xs text-gray-400 mt-1">监控型号</div>
+    </div>
+    <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+      <div class="text-2xl font-bold text-green-600">${stats.total_records || 0}</div>
+      <div class="text-xs text-gray-400 mt-1">成交记录</div>
+    </div>
+    <div class="bg-white rounded-lg p-4 text-center shadow-sm">
+      <div class="text-2xl font-bold text-orange-500">${allData.length}</div>
+      <div class="text-xs text-gray-400 mt-1">在售型号</div>
+    </div>
+  `;
+}
+
+function renderBrands() {
+  const brands = new Set();
+  allData.forEach(d => {
+    const b = guessBrand(d.model);
+    if (b) brands.add(b);
+  });
+
+  const container = document.getElementById('brand-tags');
+  container.innerHTML = '<span class="tag active px-3 py-1 rounded-full text-xs bg-gray-100 text-gray-600" data-brand="all">全部</span>';
+  brands.forEach(b => {
+    container.innerHTML += `<span class="tag px-3 py-1 rounded-full text-xs bg-gray-100 text-gray-600" data-brand="${b}">${b}</span>`;
+  });
+
+  container.querySelectorAll('.tag').forEach(tag => {
+    tag.addEventListener('click', () => {
+      container.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
+      tag.classList.add('active');
+      currentBrand = tag.dataset.brand;
+      renderCards();
+    });
+  });
+}
+
+function guessBrand(model) {
+  const m = model.toUpperCase();
+  if (m.includes('天斧') || m.includes('弓箭') || m.includes('疾光') || m.includes('YONEX') || m.includes('NF') || m.includes('ARC')) return 'YONEX';
+  if (m.includes('风刃') || m.includes('雷霆') || m.includes('战戟') || m.includes('李宁')) return '李宁';
+  if (m.includes('神速') || m.includes('龙牙') || m.includes('极速') || m.includes('VICTOR')) return 'VICTOR';
+  return '';
+}
+
+function renderCards() {
+  const grid = document.getElementById('model-grid');
+  let filtered = allData;
+  if (currentBrand !== 'all') {
+    filtered = allData.filter(d => guessBrand(d.model) === currentBrand);
+  }
+
+  grid.innerHTML = filtered.map(d => {
+    const brand = guessBrand(d.model) || '其他';
+    const trendId = `trend-${d.model.replace(/\s+/g, '-')}`;
+    return `
+      <div class="card bg-white rounded-xl p-5 shadow-sm cursor-pointer" onclick="location.href='racket.html?model=${encodeURIComponent(d.model)}'">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-600">${brand}</span>
+          <span class="text-xs text-gray-400">${d.total_sales}笔成交</span>
+        </div>
+        <h3 class="font-semibold text-gray-800 mb-2 text-sm">${d.model}</h3>
+        <div class="flex items-end gap-2 mb-3">
+          <span class="text-2xl font-bold text-red-500">¥${d.avg_price}</span>
+          <span class="text-xs text-gray-400 mb-1">均价</span>
+        </div>
+        <div class="text-xs text-gray-400 mb-3">
+          ¥${d.min_price} ~ ¥${d.max_price}
+          ${d.severe_count > 0 ? `<span class="text-red-400 ml-1">⚠️${d.severe_count}条严重</span>` : ''}
+        </div>
+        <div id="${trendId}" style="height:60px;"></div>
+      </div>
+    `;
+  }).join('');
+
+  // 迷你趋势图
+  filtered.forEach(d => {
+    const trendId = `trend-${d.model.replace(/\s+/g, '-')}`;
+    const el = document.getElementById(trendId);
+    if (!el || !d.trend_prices?.length) return;
+
+    const chart = echarts.init(el);
+    chart.setOption({
+      grid: { left: 0, right: 0, top: 0, bottom: 0 },
+      xAxis: { show: false, data: d.trend_dates },
+      yAxis: { show: false, min: 'dataMin' },
+      series: [{
+        type: 'line', data: d.trend_prices, smooth: true, symbol: 'none',
+        lineStyle: { width: 2, color: '#3b82f6' },
+        areaStyle: { color: { type: 'linear', x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: 'rgba(59,130,246,0.15)' }, { offset: 1, color: 'rgba(59,130,246,0)' }] } }
+      }]
+    });
+  });
+}
+
+// Search
+document.getElementById('search').addEventListener('input', (e) => {
+  const q = e.target.value.toLowerCase();
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.style.display = text.includes(q) ? '' : 'none';
+  });
+});
+
+loadData();
+</script>
+</body>
+</html>

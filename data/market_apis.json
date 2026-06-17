@@ -1,0 +1,202 @@
+{
+  "all": [
+    {
+      "api": "mtop.gaia.nodejs.gaia.idle.data.gw.v2.index.get",
+      "url": "https://h5api.m.goofish.com/h5/mtop.gaia.nodejs.gaia.idle.data.gw.v2.index.get/1.0/?jsv=2.7.2&appKey=34839810&t=1781460224869&sign=f870e713b16aa2731d734678b18e3125&v=1.0&type=originaljson&accountSite=xianyu&dataType=json&timeout=20000&api=mtop.gaia.nodejs.gaia.idle.data.gw.v2.index.get&sessionOption",
+      "status": 200,
+      "ret": [
+        "FAIL_SYS_TOKEN_EMPTY::令牌为空"
+      ],
+      "data_keys": [],
+      "data_preview": "{}"
+    },
+    {
+      "api": "mtop.gaia.nodejs.gaia.idle.data.gw.v2.index.get",
+      "url": "https://h5api.m.goofish.com/h5/mtop.gaia.nodejs.gaia.idle.data.gw.v2.index.get/1.0/?jsv=2.7.2&appKey=34839810&t=1781460226096&sign=78b90e0a79ddd7f9048d9185c7e88541&v=1.0&type=originaljson&accountSite=xianyu&dataType=json&timeout=20000&api=mtop.gaia.nodejs.gaia.idle.data.gw.v2.index.get&sessionOption",
+      "status": 200,
+      "ret": [
+        "SUCCESS::调用成功"
+      ],
+      "data_keys": [
+        "pageNumber",
+        "hasMore",
+        "serverTime",
+        "iOSChecked",
+        "isFallback",
+        "seed",
+        "pageConfInfo"
+      ],
+      "data_preview": "{'pageNumber': 1, 'hasMore': False, 'serverTime': 1781460228115, 'iOSChecked': False, 'isFallback': False, 'seed': {}, 'pageConfInfo': {'announcement': {'icon': 'https://gw.alicdn.com/imgextra/i3/O1CN01Q2dFbi1mwkyyonBNP_!!6000000005019-2-tps-160-160.png', 'time': '2026/03/18 18:08:52', 'text': '鱼小铺P"
+    },
+    {
+      "api": "mtop.taobao.idlemessage.pc.loginuser.get",
+      "url": "https://h5api.m.goofish.com/h5/mtop.taobao.idlemessage.pc.loginuser.get/1.0/?jsv=2.7.2&appKey=34839810&t=1781460226402&sign=6240efece66af022a70356afd549398c&v=1.0&type=originaljson&accountSite=xianyu&dataType=json&timeout=20000&api=mtop.taobao.idlemessage.pc.loginuser.get&sessionOption=AutoLoginOnly",
+      "status": 200,
+      "ret": [
+        "SUCCESS::调用成功"
+      ],
+      "data_keys": [
+        "needDecryptKeys",
+        "needDecryptKeysV2",
+        "userId"
+      ],
+      "data_preview": "{'needDecryptKeys': [], 'needDecryptKeysV2': [], 'userId': 3698925804}"
+    },
+    {
+      "api": "mtop.gaia.nodejs.gaia.idle.data.gw.v2.index.get",
+      "url": "https://h5api.m.goofish.com/h5/mtop.gaia.nodejs.gaia.idle.data.gw.v2.index.get/1.0/?jsv=2.7.2&appKey=34839810&t=1781460226402&sign=c8372615903da094dd2217fe4540effd&v=1.0&type=originaljson&accountSite=xianyu&dataType=json&timeout=20000&api=mtop.gaia.nodejs.gaia.idle.data.gw.v2.index.get&sessionOption",
+      "status": 200,
+      "ret": [
+        "SUCCESS::调用成功"
+      ],
+      "data_keys": [
+        "pageNumber",
+        "hasMore",
+        "serverTime",
+        "iOSChecked",
+        "isFallback",
+        "seed",
+        "pageConfInfo"
+      ],
+      "data_preview": "{'pageNumber': 1, 'hasMore': False, 'serverTime': 1781460228434, 'iOSChecked': False, 'isFallback': False, 'seed': {}, 'pageConfInfo': {'sideBarList': [{'code': 'ENTRY_PUBLISH', 'value': '发闲置', 'iconUrl': 'https://gw.alicdn.com/imgextra/i1/O1CN01C6uKwq1cPBktBGZgj_!!6000000003592-54-tps-78-78.apng', "
+    },
+    {
+      "api": "mtop.gaia.nodejs.gaia.idle.data.gw.v2.index.get",
+      "url": "https://h5api.m.goofish.com/h5/mtop.gaia.nodejs.gaia.idle.data.gw.v2.index.get/1.0/?jsv=2.7.2&appKey=34839810&t=1781460226403&sign=89f7141daafbdb69a2cd8beece52df08&v=1.0&type=originaljson&accountSite=xianyu&dataType=json&timeout=20000&api=mtop.gaia.nodejs.gaia.idle.data.gw.v2.index.get&sessionOption",
+      "status": 200,
+      "ret": [
+        "SUCCESS::调用成功"
+      ],
+      "data_keys": [
+        "pageNumber",
+        "hasMore",
+        "serverTime",
+        "iOSChecked",
+        "isFallback",
+        "seed",
+        "pageConfInfo"
+      ],
+      "data_preview": "{'pageNumber': 1, 'hasMore': False, 'serverTime': 1781460228457, 'iOSChecked': False, 'isFallback': False, 'seed': {}, 'pageConfInfo': {'homeLogo': {'logoTitle': '闲不住，上闲鱼！', 'logo': 'https://img.alicdn.com/imgextra/i3/O1CN01XP17o61iPXe2FKJGO_!!6000000004405-2-tps-720-216.png', 'logoLottie': 'https:/"
+    },
+    {
+      "api": "mtop.idle.web.user.page.nav",
+      "url": "https://h5api.m.goofish.com/h5/mtop.idle.web.user.page.nav/1.0/?jsv=2.7.2&appKey=34839810&t=1781460226404&sign=18cc5f6f6a867322d875beb918a88d16&v=1.0&type=originaljson&accountSite=xianyu&dataType=json&timeout=20000&api=mtop.idle.web.user.page.nav&sessionOption=AutoLoginOnly&spm_cnt=a21ybx.search.0.0",
+      "status": 200,
+      "ret": [
+        "SUCCESS::调用成功"
+      ],
+      "data_keys": [
+        "module",
+        "needDecryptKeys"
+      ],
+      "data_preview": "{'module': {'base': {'purchaseCount': 371, 'displayName': '风吹羽球工作室', 'avatar': 'http://img.alicdn.com/bao/uploaded/i4/O1CN01RU8wGP1skHtFkhgK2_!!4611686018427379948-0-mtopupload.jpg', 'soldCount': 540, 'followers': '229', 'following': '21', 'collectionCount': 30}}, 'needDecryptKeys': ['baseInfo.encry"
+    },
+    {
+      "api": "mtop.taobao.idlemessage.pc.redpoint.query",
+      "url": "https://h5api.m.goofish.com/h5/mtop.taobao.idlemessage.pc.redpoint.query/1.0/?jsv=2.7.2&appKey=34839810&t=1781460226694&sign=454861f2415a2e208dfe2c615f2129cd&v=1.0&type=originaljson&accountSite=xianyu&dataType=json&timeout=20000&api=mtop.taobao.idlemessage.pc.redpoint.query&sessionOption=AutoLoginOn",
+      "status": 200,
+      "ret": [
+        "SUCCESS::调用成功"
+      ],
+      "data_keys": [
+        "needDecryptKeys",
+        "needDecryptKeysV2",
+        "total"
+      ],
+      "data_preview": "{'needDecryptKeys': [], 'needDecryptKeysV2': [], 'total': 4}"
+    },
+    {
+      "api": "mtop.taobao.idlemtopsearch.pc.search.shade",
+      "url": "https://h5api.m.goofish.com/h5/mtop.taobao.idlemtopsearch.pc.search.shade/1.0/?jsv=2.7.2&appKey=34839810&t=1781460226795&sign=be01a03e269c7864ea709c580e6029e9&v=1.0&type=originaljson&accountSite=xianyu&dataType=json&timeout=20000&api=mtop.taobao.idlemtopsearch.pc.search.shade&sessionOption=AutoLogin",
+      "status": 200,
+      "ret": [
+        "SUCCESS::调用成功"
+      ],
+      "data_keys": [
+        "addActivatePage",
+        "bucketId",
+        "multiWordsExpectedCount",
+        "multiWordsForMarquee",
+        "needDecryptKeys",
+        "serverTime",
+        "singleShadeStyle",
+        "singleShadeWords",
+        "trackParams",
+        "useNewSingleItemCardStyle"
+      ],
+      "data_preview": "{'addActivatePage': True, 'bucketId': 39, 'multiWordsExpectedCount': 10, 'multiWordsForMarquee': True, 'needDecryptKeys': [], 'serverTime': '2026-06-15 02:03:48', 'singleShadeStyle': True, 'singleShadeWords': [{'deliveryShade': False, 'realShade': '李宁风动9000i', 'showText': '李宁风动9000i', 'textBold': Fa"
+    },
+    {
+      "api": "mtop.taobao.idlemtopsearch.pc.item.search.activate",
+      "url": "https://h5api.m.goofish.com/h5/mtop.taobao.idlemtopsearch.pc.item.search.activate/1.0/?jsv=2.7.2&appKey=34839810&t=1781460226795&sign=eef0cd0d38820874dbeb019cb798dd48&v=1.0&type=originaljson&accountSite=xianyu&dataType=json&timeout=20000&api=mtop.taobao.idlemtopsearch.pc.item.search.activate&session",
+      "status": 200,
+      "ret": [
+        "SUCCESS::调用成功"
+      ],
+      "data_keys": [
+        "bucketId",
+        "cardList",
+        "needDecryptKeys",
+        "serverTime",
+        "trackParams"
+      ],
+      "data_preview": "{'bucketId': 39, 'cardList': [{'cardData': {'hotwords': [{'content': '6折享新机体验', 'link': 'https://h5.m.goofish.com/wow/moyu/moyu-project/act-react/pages/1AHFhtVDe4o2', 'text': '3C年中底价', 'type': 0}], 'keywords': [{'link': 'fleamarket://search_items?keyword=%E6%9D%8E%E5%AE%81%E9%A3%8E%E5%8A%A89000i&biz"
+    },
+    {
+      "api": "mtop.taobao.idlemtopsearch.pc.search",
+      "url": "https://h5api.m.goofish.com/h5/mtop.taobao.idlemtopsearch.pc.search/1.0/?jsv=2.7.2&appKey=34839810&t=1781460226404&sign=ac2f441f11c4735be9fd3667dc6091d5&v=1.0&type=originaljson&accountSite=xianyu&dataType=json&timeout=20000&api=mtop.taobao.idlemtopsearch.pc.search&sessionOption=AutoLoginOnly&spm_cnt",
+      "status": 200,
+      "ret": [
+        "SUCCESS::调用成功"
+      ],
+      "data_keys": [
+        "appBar",
+        "filterBar",
+        "needDecryptKeys",
+        "resultInfo",
+        "resultList",
+        "resultPrefixBar",
+        "tabList",
+        "topList"
+      ],
+      "data_preview": "{'appBar': {}, 'filterBar': {'filterBarCellDO': [], 'hidden': False, 'showFilterBarWithCpv': False, 'showWantBuy': False}, 'needDecryptKeys': [], 'resultInfo': {'forceUseTppRepair': False, 'hasNextPage': True, 'hidePriceFilter': False, 'loadingTextList': ['宝贝正在来...', '呼哧呼哧...', '还有很多页...', '总有你想要..."
+    }
+  ],
+  "market": [
+    {
+      "api": "mtop.taobao.idlemtopsearch.pc.item.search.activate",
+      "url": "https://h5api.m.goofish.com/h5/mtop.taobao.idlemtopsearch.pc.item.search.activate/1.0/?jsv=2.7.2&appKey=34839810&t=1781460226795&sign=eef0cd0d38820874dbeb019cb798dd48&v=1.0&type=originaljson&accountSite=xianyu&dataType=json&timeout=20000&api=mtop.taobao.idlemtopsearch.pc.item.search.activate&session",
+      "status": 200,
+      "ret": [
+        "SUCCESS::调用成功"
+      ],
+      "data_keys": [
+        "bucketId",
+        "cardList",
+        "needDecryptKeys",
+        "serverTime",
+        "trackParams"
+      ],
+      "data_preview": "{'bucketId': 39, 'cardList': [{'cardData': {'hotwords': [{'content': '6折享新机体验', 'link': 'https://h5.m.goofish.com/wow/moyu/moyu-project/act-react/pages/1AHFhtVDe4o2', 'text': '3C年中底价', 'type': 0}], 'keywords': [{'link': 'fleamarket://search_items?keyword=%E6%9D%8E%E5%AE%81%E9%A3%8E%E5%8A%A89000i&biz"
+    },
+    {
+      "api": "mtop.taobao.idlemtopsearch.pc.search",
+      "url": "https://h5api.m.goofish.com/h5/mtop.taobao.idlemtopsearch.pc.search/1.0/?jsv=2.7.2&appKey=34839810&t=1781460226404&sign=ac2f441f11c4735be9fd3667dc6091d5&v=1.0&type=originaljson&accountSite=xianyu&dataType=json&timeout=20000&api=mtop.taobao.idlemtopsearch.pc.search&sessionOption=AutoLoginOnly&spm_cnt",
+      "status": 200,
+      "ret": [
+        "SUCCESS::调用成功"
+      ],
+      "data_keys": [
+        "appBar",
+        "filterBar",
+        "needDecryptKeys",
+        "resultInfo",
+        "resultList",
+        "resultPrefixBar",
+        "tabList",
+        "topList"
+      ],
+      "data_preview": "{'appBar': {}, 'filterBar': {'filterBarCellDO': [], 'hidden': False, 'showFilterBarWithCpv': False, 'showWantBuy': False}, 'needDecryptKeys': [], 'resultInfo': {'forceUseTppRepair': False, 'hasNextPage': True, 'hidePriceFilter': False, 'loadingTextList': ['宝贝正在来...', '呼哧呼哧...', '还有很多页...', '总有你想要..."
+    }
+  ]
+}

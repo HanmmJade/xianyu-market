@@ -1,0 +1,445 @@
+[
+  {
+    "list_price": 1050.0,
+    "sold_after": "2天",
+    "sold_price": 1000.0,
+    "model": "疾光NF800PRO",
+    "crawled_at": "2026-06-15T01:24:21.952299"
+  },
+  {
+    "list_price": 900.0,
+    "sold_after": "当天",
+    "sold_price": 850.0,
+    "model": "疾光NF800PRO",
+    "crawled_at": "2026-06-15T01:24:21.952299"
+  },
+  {
+    "list_price": 1000.0,
+    "sold_after": "当天",
+    "sold_price": 886.0,
+    "model": "疾光NF800PRO",
+    "crawled_at": "2026-06-15T01:24:21.953273"
+  },
+  {
+    "list_price": 1200.0,
+    "sold_after": "23天",
+    "sold_price": 1000.0,
+    "model": "疾光NF800PRO",
+    "crawled_at": "2026-06-15T01:24:21.953273"
+  },
+  {
+    "list_price": 950.0,
+    "sold_after": "当天",
+    "sold_price": 900.0,
+    "model": "疾光NF800PRO",
+    "crawled_at": "2026-06-15T01:24:21.953273"
+  },
+  {
+    "sold_price": 1050.0,
+    "list_price": 1050.0,
+    "sold_after": "1天",
+    "model": "88dpro",
+    "keyword": "88dpro",
+    "crawled_at": "2026-06-15T01:40:35.531518"
+  },
+  {
+    "sold_price": 1035.0,
+    "list_price": 1180.0,
+    "sold_after": "7天",
+    "model": "88dpro",
+    "keyword": "88dpro",
+    "crawled_at": "2026-06-15T01:40:35.531518"
+  },
+  {
+    "sold_price": 1090.0,
+    "list_price": 1150.0,
+    "sold_after": "当天",
+    "model": "88dpro",
+    "keyword": "88dpro",
+    "crawled_at": "2026-06-15T01:40:35.531518"
+  },
+  {
+    "sold_price": 1264.0,
+    "list_price": 1350.0,
+    "sold_after": "6天",
+    "model": "88dpro",
+    "keyword": "88dpro",
+    "crawled_at": "2026-06-15T01:40:35.531518"
+  },
+  {
+    "sold_price": 1106.0,
+    "list_price": 1111.0,
+    "sold_after": "1天",
+    "model": "88dpro",
+    "keyword": "88dpro",
+    "crawled_at": "2026-06-15T01:40:38.855406"
+  },
+  {
+    "sold_price": 1050.0,
+    "list_price": 1050.0,
+    "sold_after": "1天",
+    "model": "天斧88D PRO",
+    "keyword": "88dpro",
+    "crawled_at": "2026-06-15T01:41:59.806996"
+  },
+  {
+    "sold_price": 1035.0,
+    "list_price": 1180.0,
+    "sold_after": "7天",
+    "model": "天斧88D PRO",
+    "keyword": "88dpro",
+    "crawled_at": "2026-06-15T01:41:59.806996"
+  },
+  {
+    "sold_price": 1090.0,
+    "list_price": 1150.0,
+    "sold_after": "当天",
+    "model": "天斧88D PRO",
+    "keyword": "88dpro",
+    "crawled_at": "2026-06-15T01:41:59.806996"
+  },
+  {
+    "sold_price": 1264.0,
+    "list_price": 1350.0,
+    "sold_after": "6天",
+    "model": "天斧88D PRO",
+    "keyword": "88dpro",
+    "crawled_at": "2026-06-15T01:41:59.806996"
+  },
+  {
+    "sold_price": 1106.0,
+    "list_price": 1111.0,
+    "sold_after": "1天",
+    "model": "天斧88D PRO",
+    "keyword": "88dpro",
+    "crawled_at": "2026-06-15T01:42:03.034477"
+  },
+  {
+    "sold_price": 1099.0,
+    "list_price": 1099.0,
+    "sold_after": "当天",
+    "model": "天斧100ZZ",
+    "keyword": "100zz",
+    "crawled_at": "2026-06-15T01:42:42.631946"
+  },
+  {
+    "sold_price": 1000.0,
+    "list_price": 1047.0,
+    "sold_after": "当天",
+    "model": "天斧100ZZ",
+    "keyword": "100zz",
+    "crawled_at": "2026-06-15T01:42:42.631946"
+  },
+  {
+    "sold_price": 1200.0,
+    "list_price": 1500.0,
+    "sold_after": "28天",
+    "model": "天斧100ZZ",
+    "keyword": "100zz",
+    "crawled_at": "2026-06-15T01:42:42.631946"
+  },
+  {
+    "sold_price": 1389.0,
+    "list_price": 1788.0,
+    "sold_after": "22天",
+    "model": "天斧100ZZ",
+    "keyword": "100zz",
+    "crawled_at": "2026-06-15T01:42:42.631946"
+  },
+  {
+    "sold_price": 1125.0,
+    "list_price": 1400.0,
+    "sold_after": "当天",
+    "model": "天斧100ZZ",
+    "keyword": "100zz",
+    "crawled_at": "2026-06-15T01:42:45.894712"
+  },
+  {
+    "sold_price": 902.0,
+    "list_price": 920.0,
+    "sold_after": "28天",
+    "model": "天斧77PRO",
+    "keyword": "77pro",
+    "crawled_at": "2026-06-15T01:45:32.874654"
+  },
+  {
+    "sold_price": 900.0,
+    "list_price": 950.0,
+    "sold_after": "2天",
+    "model": "天斧77PRO",
+    "keyword": "77pro",
+    "crawled_at": "2026-06-15T01:45:32.874654"
+  },
+  {
+    "sold_price": 850.0,
+    "list_price": 1050.0,
+    "sold_after": "当天",
+    "model": "天斧77PRO",
+    "keyword": "77pro",
+    "crawled_at": "2026-06-15T01:45:32.874654"
+  },
+  {
+    "sold_price": 920.0,
+    "list_price": 988.0,
+    "sold_after": "5天",
+    "model": "天斧77PRO",
+    "keyword": "77pro",
+    "crawled_at": "2026-06-15T01:45:32.874654"
+  },
+  {
+    "sold_price": 883.0,
+    "list_price": 900.0,
+    "sold_after": "4天",
+    "model": "天斧77PRO",
+    "keyword": "77pro",
+    "crawled_at": "2026-06-15T01:45:36.174970"
+  },
+  {
+    "sold_price": 925.0,
+    "list_price": 999.0,
+    "sold_after": "",
+    "model": "弓箭11PRO",
+    "keyword": "arc11pro",
+    "crawled_at": "2026-06-15T01:46:12.910124"
+  },
+  {
+    "sold_price": 1088.0,
+    "list_price": 1088.0,
+    "sold_after": "",
+    "model": "弓箭11PRO",
+    "keyword": "arc11pro",
+    "crawled_at": "2026-06-15T01:46:12.910124"
+  },
+  {
+    "sold_price": 1049.0,
+    "list_price": 1049.0,
+    "sold_after": "",
+    "model": "弓箭11PRO",
+    "keyword": "arc11pro",
+    "crawled_at": "2026-06-15T01:46:12.910124"
+  },
+  {
+    "sold_price": 1120.0,
+    "list_price": 1120.0,
+    "sold_after": "",
+    "model": "弓箭11PRO",
+    "keyword": "arc11pro",
+    "crawled_at": "2026-06-15T01:46:12.910124"
+  },
+  {
+    "sold_price": 1010.0,
+    "list_price": 1100.0,
+    "sold_after": "",
+    "model": "弓箭11PRO",
+    "keyword": "arc11pro",
+    "crawled_at": "2026-06-15T01:46:12.910124"
+  },
+  {
+    "sold_price": 599.0,
+    "list_price": 600.0,
+    "sold_after": "5天",
+    "model": "风刃900",
+    "keyword": "风刃900",
+    "crawled_at": "2026-06-15T01:46:50.371273"
+  },
+  {
+    "sold_price": 614.0,
+    "list_price": 600.0,
+    "sold_after": "3天",
+    "model": "风刃900",
+    "keyword": "风刃900",
+    "crawled_at": "2026-06-15T01:46:53.734281"
+  },
+  {
+    "sold_price": 590.0,
+    "list_price": 788.0,
+    "sold_after": "68天",
+    "model": "风刃900",
+    "keyword": "风刃900",
+    "crawled_at": "2026-06-15T01:46:53.734281"
+  },
+  {
+    "sold_price": 550.0,
+    "list_price": 550.0,
+    "sold_after": "1天",
+    "model": "风刃900",
+    "keyword": "风刃900",
+    "crawled_at": "2026-06-15T01:46:53.734281"
+  },
+  {
+    "sold_price": 699.0,
+    "list_price": 699.0,
+    "sold_after": "28天",
+    "model": "风刃900",
+    "keyword": "风刃900",
+    "crawled_at": "2026-06-15T01:46:53.734281"
+  },
+  {
+    "sold_price": 599.0,
+    "list_price": 600.0,
+    "sold_after": "5天",
+    "model": "风刃900i",
+    "keyword": "风刃900i",
+    "crawled_at": "2026-06-15T01:47:27.424260"
+  },
+  {
+    "sold_price": 614.0,
+    "list_price": 600.0,
+    "sold_after": "3天",
+    "model": "风刃900i",
+    "keyword": "风刃900i",
+    "crawled_at": "2026-06-15T01:47:30.708069"
+  },
+  {
+    "sold_price": 590.0,
+    "list_price": 788.0,
+    "sold_after": "68天",
+    "model": "风刃900i",
+    "keyword": "风刃900i",
+    "crawled_at": "2026-06-15T01:47:30.708069"
+  },
+  {
+    "sold_price": 550.0,
+    "list_price": 550.0,
+    "sold_after": "1天",
+    "model": "风刃900i",
+    "keyword": "风刃900i",
+    "crawled_at": "2026-06-15T01:47:30.708069"
+  },
+  {
+    "sold_price": 699.0,
+    "list_price": 699.0,
+    "sold_after": "28天",
+    "model": "风刃900i",
+    "keyword": "风刃900i",
+    "crawled_at": "2026-06-15T01:47:30.708069"
+  },
+  {
+    "sold_price": 599.0,
+    "list_price": 600.0,
+    "sold_after": "5天",
+    "model": "雷霆80",
+    "keyword": "雷霆80",
+    "crawled_at": "2026-06-15T01:48:05.555400"
+  },
+  {
+    "sold_price": 614.0,
+    "list_price": 600.0,
+    "sold_after": "3天",
+    "model": "雷霆80",
+    "keyword": "雷霆80",
+    "crawled_at": "2026-06-15T01:48:08.880888"
+  },
+  {
+    "sold_price": 590.0,
+    "list_price": 788.0,
+    "sold_after": "68天",
+    "model": "雷霆80",
+    "keyword": "雷霆80",
+    "crawled_at": "2026-06-15T01:48:08.880888"
+  },
+  {
+    "sold_price": 550.0,
+    "list_price": 550.0,
+    "sold_after": "1天",
+    "model": "雷霆80",
+    "keyword": "雷霆80",
+    "crawled_at": "2026-06-15T01:48:08.880888"
+  },
+  {
+    "sold_price": 699.0,
+    "list_price": 699.0,
+    "sold_after": "28天",
+    "model": "雷霆80",
+    "keyword": "雷霆80",
+    "crawled_at": "2026-06-15T01:48:08.880888"
+  },
+  {
+    "sold_price": 599.0,
+    "list_price": 600.0,
+    "sold_after": "5天",
+    "model": "战戟8000",
+    "keyword": "战戟8000",
+    "crawled_at": "2026-06-15T01:48:42.584364"
+  },
+  {
+    "sold_price": 614.0,
+    "list_price": 600.0,
+    "sold_after": "3天",
+    "model": "战戟8000",
+    "keyword": "战戟8000",
+    "crawled_at": "2026-06-15T01:48:45.899759"
+  },
+  {
+    "sold_price": 590.0,
+    "list_price": 788.0,
+    "sold_after": "68天",
+    "model": "战戟8000",
+    "keyword": "战戟8000",
+    "crawled_at": "2026-06-15T01:48:45.899759"
+  },
+  {
+    "sold_price": 550.0,
+    "list_price": 550.0,
+    "sold_after": "1天",
+    "model": "战戟8000",
+    "keyword": "战戟8000",
+    "crawled_at": "2026-06-15T01:48:45.899759"
+  },
+  {
+    "sold_price": 699.0,
+    "list_price": 699.0,
+    "sold_after": "28天",
+    "model": "战戟8000",
+    "keyword": "战戟8000",
+    "crawled_at": "2026-06-15T01:48:45.899759"
+  },
+  {
+    "sold_price": 1099.0,
+    "list_price": 1099.0,
+    "sold_after": "当天",
+    "model": "神速100X",
+    "keyword": "神速100X",
+    "crawled_at": "2026-06-15T01:49:21.741916"
+  },
+  {
+    "sold_price": 1150.0,
+    "list_price": 1248.0,
+    "sold_after": "3天",
+    "model": "神速100X",
+    "keyword": "神速100X",
+    "crawled_at": "2026-06-15T01:49:24.965809"
+  },
+  {
+    "sold_price": 1099.0,
+    "list_price": 1099.0,
+    "sold_after": "当天",
+    "model": "龙牙之刃",
+    "keyword": "龙牙之刃",
+    "crawled_at": "2026-06-15T01:49:57.739342"
+  },
+  {
+    "sold_price": 1150.0,
+    "list_price": 1248.0,
+    "sold_after": "3天",
+    "model": "龙牙之刃",
+    "keyword": "龙牙之刃",
+    "crawled_at": "2026-06-15T01:50:01.000894"
+  },
+  {
+    "sold_price": 1099.0,
+    "list_price": 1099.0,
+    "sold_after": "当天",
+    "model": "极速10",
+    "keyword": "极速10",
+    "crawled_at": "2026-06-15T01:50:37.993998"
+  },
+  {
+    "sold_price": 1150.0,
+    "list_price": 1248.0,
+    "sold_after": "3天",
+    "model": "极速10",
+    "keyword": "极速10",
+    "crawled_at": "2026-06-15T01:50:41.277198"
+  }
+]

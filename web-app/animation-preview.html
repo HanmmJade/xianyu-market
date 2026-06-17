@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Bits 动画效果预览 - 闲鱼数据库</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 40px;
+        }
+        .section {
+            margin-bottom: 60px;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            color: #00d2ff;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0,210,255,0.3);
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .demo-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .demo-card:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: #00d2ff;
+            transform: translateY(-2px);
+        }
+        .demo-card.selected {
+            border-color: #00ff88;
+            background: rgba(0,255,136,0.1);
+        }
+        .demo-card.selected::after {
+            content: '✓';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #00ff88;
+            color: #000;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .demo-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .demo-desc {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 16px;
+        }
+        .demo-preview {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* BlurText 效果 */
+        .blur-text span {
+            display: inline-block;
+            animation: blurIn 0.8s ease-out forwards;
+            opacity: 0;
+            filter: blur(10px);
+        }
+        @keyframes blurIn {
+            to { opacity: 1; filter: blur(0); }
+        }
+        .blur-text span:nth-child(1) { animation-delay: 0s; }
+        .blur-text span:nth-child(2) { animation-delay: 0.1s; }
+        .blur-text span:nth-child(3) { animation-delay: 0.2s; }
+        .blur-text span:nth-child(4) { animation-delay: 0.3s; }
+
+        /* CountUp 效果 */
+        .count-up {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00d2ff;
+        }
+
+        /* GradientText 效果 */
+        .gradient-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5, #00ff88, #00d2ff);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 3s linear infinite;
+        }
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+
+        /* ShinyText 效果 */
+        .shiny-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #fff 0%, #00d2ff 50%, #fff 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 2s linear infinite;
+        }
+        @keyframes shine {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* GlitchText 效果 */
+        .glitch-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            position: relative;
+        }
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .glitch-text::before {
+            color: #ff0000;
+            animation: glitch1 0.3s infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+        }
+        .glitch-text::after {
+            color: #00ffff;
+            animation: glitch2 0.3s infinite;
+            clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+        }
+        @keyframes glitch1 {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+        @keyframes glitch2 {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(2px, -2px); }
+            40% { transform: translate(2px, 2px); }
+            60% { transform: translate(-2px, -2px); }
+            80% { transform: translate(-2px, 2px); }
+        }
+
+        /* SpotlightCard 效果 */
+        .spotlight-card {
+            position: relative;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .spotlight-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,210,255,0.3) 0%, transparent 50%);
+            animation: spotlightMove 3s ease-in-out infinite;
+        }
+        @keyframes spotlightMove {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(30%, 30%); }
+        }
+
+        /* TiltedCard 效果 */
+        .tilted-card {
+            perspective: 1000px;
+        }
+        .tilted-card-inner {
+            background: linear-gradient(135deg, rgba(0,210,255,0.2), rgba(58,123,213,0.2));
+            border-radius: 8px;
+            padding: 20px;
+            transform: rotateY(5deg) rotateX(5deg);
+            transition: transform 0.3s;
+        }
+        .tilted-card:hover .tilted-card-inner {
+            transform: rotateY(0deg) rotateX(0deg);
+        }
+
+        /* AnimatedList 效果 */
+        .animated-list {
+            list-style: none;
+        }
+        .animated-list li {
+            padding: 8px 12px;
+            margin: 4px 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            animation: slideIn 0.5s ease-out forwards;
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        .animated-list li:nth-child(1) { animation-delay: 0.1s; }
+        .animated-list li:nth-child(2) { animation-delay: 0.2s; }
+        .animated-list li:nth-child(3) { animation-delay: 0.3s; }
+        @keyframes slideIn {
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* BorderGlow 效果 */
+        .border-glow {
+            position: relative;
+            border-radius: 8px;
+            padding: 20px;
+            background: rgba(0,0,0,0.3);
+        }
+        .border-glow::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00d2ff, #3a7bd5, #00ff88, #00d2ff);
+            background-size: 400% 400%;
+            border-radius: 10px;
+            z-index: -1;
+            animation: borderGlow 3s linear infinite;
+        }
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 背景动画 - Squares */
+        .squares-bg {
+            position: relative;
+            overflow: hidden;
+            height: 80px;
+        }
+        .square {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(0,210,255,0.2);
+            animation: floatSquare 6s linear infinite;
+        }
+        @keyframes floatSquare {
+            0% { transform: translateY(100px) rotate(0deg); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+
+        /* 底部按钮 */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .btn {
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            color: #fff;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,210,255,0.4);
+        }
+        .selected-count {
+            margin-bottom: 20px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vue Bits 动画效果预览</h1>
+        <p class="subtitle">点击选择你喜欢的动画效果，将应用到闲鱼数据库前端</p>
+
+        <div class="selected-count">已选择: <span id="count">0</span> 个效果</div>
+
+        <!-- 文字动画 -->
+        <div class="section">
+            <h2 class="section-title">📝 文字动画 (TextAnimations)</h2>
+            <div class="demo-grid">
+                <div class="demo-card" data-name="BlurText" onclick="toggleSelect(this)">
+                    <div class="demo-name">BlurText</div>
+                    <div class="demo-desc">文字模糊入场效果，适合标题展示</div>
+                    <div class="demo-preview">
+                        <div class="blur-text">
+                            <span>闲鱼</span>
+                            <span>球拍</span>
+                            <span>行情</span>
+                            <span>监控</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-card" data-name="CountUp" onclick="toggleSelect(this)">
+                    <div class="demo-name">CountUp</div>
+                    <div class="demo-desc">数字滚动计数动画，适合统计数据</div>
+                    <div class="demo-preview">
+                        <div class="count-up" id="countUpDemo">0</div>
+                    </div>
+                </div>
+
+                <div class="demo-card" data-name="GradientText" onclick="toggleSelect(this)">
+                    <div class="demo-name">GradientText</div>
+                    <div class="demo-desc">渐变流动文字效果，适合品牌标题</div>
+                    <div class="demo-preview">
+                        <div class="gradient-text">闲鱼球拍行情监控系统</div>
+                    </div>
+                </div>
+
+                <div class="demo-card" data-name="ShinyText" onclick="toggleSelect(this)">
+                    <div class="demo-name">ShinyText</div>
+                    <div class="demo-desc">光泽扫过文字效果，适合强调文字</div>
+                    <div class="demo-preview">
+                        <div class="shiny-text">实时行情数据</div>
+                    </div>
+                </div>
+
+                <div class="demo-card" data-name="GlitchText" onclick="toggleSelect(this)">
+                    <div class="demo-name">GlitchText</div>
+                    <div class="demo-desc">故障风格文字效果，适合科技感UI</div>
+                    <div class="demo-preview">
+                        <div class="glitch-text" data-text="数据加载中">数据加载中</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 组件动画 -->
+        <div class="section">
+            <h2 class="section-title">🧩 组件动画 (Components)</h2>
+            <div class="demo-grid">
+                <div class="demo-card" data-name="SpotlightCard" onclick="toggleSelect(this)">
+                    <div class="demo-name">SpotlightCard</div>
+                    <div class="demo-desc">聚光灯跟随卡片效果，适合产品卡片</div>
+                    <div class="demo-preview">
+                        <div class="spotlight-card">
+                            <div style="position:relative;z-index:1">天斧100ZZ - ¥1,237</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-card" data-name="TiltedCard" onclick="toggleSelect(this)">
+                    <div class="demo-name">TiltedCard</div>
+                    <div class="demo-desc">3D倾斜卡片效果，悬停时回正</div>
+                    <div class="demo-preview">
+                        <div class="tilted-card">
+                            <div class="tilted-card-inner">疾光800PRO - ¥815</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-card" data-name="AnimatedList" onclick="toggleSelect(this)">
+                    <div class="demo-name">AnimatedList</div>
+                    <div class="demo-desc">列表项依次入场动画，适合数据列表</div>
+                    <div class="demo-preview">
+                        <ul class="animated-list">
+                            <li>天斧88D PRO - 45笔成交</li>
+                            <li>弓箭11PRO - 43笔成交</li>
+                            <li>天斧100ZZ - 35笔成交</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="demo-card" data-name="BorderGlow" onclick="toggleSelect(this)">
+                    <div class="demo-name">BorderGlow</div>
+                    <div class="demo-desc">边框发光流动效果，适合强调卡片</div>
+                    <div class="demo-preview">
+                        <div class="border-glow">当前均价: ¥1,023</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 背景动画 -->
+        <div class="section">
+            <h2 class="section-title">🖼️ 背景动画 (Backgrounds)</h2>
+            <div class="demo-grid">
+                <div class="demo-card" data-name="Squares" onclick="toggleSelect(this)">
+                    <div class="demo-name">Squares</div>
+                    <div class="demo-desc">方块漂浮背景效果，适合页面背景</div>
+                    <div class="demo-preview squares-bg">
+                        <div class="square" style="left:10%;animation-delay:0s"></div>
+                        <div class="square" style="left:30%;animation-delay:1s"></div>
+                        <div class="square" style="left:50%;animation-delay:2s"></div>
+                        <div class="square" style="left:70%;animation-delay:3s"></div>
+                        <div class="square" style="left:90%;animation-delay:4s"></div>
+                    </div>
+                </div>
+
+                <div class="demo-card" data-name="Aurora" onclick="toggleSelect(this)">
+                    <div class="demo-name">Aurora</div>
+                    <div class="demo-desc">极光流动背景效果，适合高端页面</div>
+                    <div class="demo-preview" style="background: linear-gradient(45deg, #0f0c29, #302b63, #24243e); position: relative; overflow: hidden;">
+                        <div style="position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(0,210,255,0.3),transparent);animation:auroraMove 3s ease-in-out infinite"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button class="btn" onclick="applySelected()">应用选中的效果</button>
+            <p style="margin-top:10px;color:#888;font-size:0.85rem">选择后将集成到闲鱼数据库前端</p>
+        </div>
+    </div>
+
+    <script>
+        // 数字滚动动画
+        function animateCountUp(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start).toLocaleString();
+                }
+            }, 16);
+        }
+
+        // 启动数字动画
+        setTimeout(() => {
+            animateCountUp(document.getElementById('countUpDemo'), 1237);
+        }, 500);
+
+        // 选择功能
+        const selected = new Set();
+
+        function toggleSelect(card) {
+            const name = card.dataset.name;
+            if (selected.has(name)) {
+                selected.delete(name);
+                card.classList.remove('selected');
+            } else {
+                selected.add(name);
+                card.classList.add('selected');
+            }
+            document.getElementById('count').textContent = selected.size;
+        }
+
+        function applySelected() {
+            if (selected.size === 0) {
+                alert('请先选择至少一个动画效果');
+                return;
+            }
+            const list = Array.from(selected).join(', ');
+            alert('已选择: ' + list + '\n\n这些效果将集成到闲鱼数据库前端');
+            console.log('Selected effects:', Array.from(selected));
+        }
+
+        // 极光动画CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes auroraMove {
+                0%, 100% { transform: translateX(-100%); }
+                50% { transform: translateX(100%); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

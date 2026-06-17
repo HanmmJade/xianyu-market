@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>型号详情 — 球拍行情价</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .back-btn { transition: color 0.15s; }
+  .back-btn:hover { color: #3b82f6; }
+  .cond-badge { display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 12px; }
+  .score-bar { height: 6px; border-radius: 3px; background: #e5e7eb; overflow: hidden; }
+  .score-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
+  .evidence-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 11px; margin: 1px 2px; }
+  .severe-warning { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 8px 12px; }
+</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+<!-- Header -->
+<header class="bg-white shadow-sm">
+  <div class="max-w-5xl mx-auto px-4 py-4">
+    <a href="index.html" class="back-btn text-gray-500 text-sm flex items-center gap-1">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      返回列表
+    </a>
+    <h1 id="model-name" class="text-xl font-bold text-gray-800 mt-2"></h1>
+    <p id="model-summary" class="text-sm text-gray-400 mt-1"></p>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-6 space-y-6">
+
+  <!-- Condition Stats Cards -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-3" id="condition-cards"></div>
+
+  <!-- Price Distribution Chart -->
+  <div class="bg-white rounded-xl p-5 shadow-sm">
+    <h2 class="text-sm font-semibold text-gray-700 mb-4">📊 价格分布（按成色）</h2>
+    <div id="price-dist-chart" style="height: 300px;"></div>
+  </div>
+
+  <!-- Price Trend Chart -->
+  <div class="bg-white rounded-xl p-5 shadow-sm">
+    <h2 class="text-sm font-semibold text-gray-700 mb-4">📈 价格走势（按成色）</h2>
+    <div id="trend-chart" style="height: 350px;"></div>
+  </div>
+
+  <!-- Condition Comparison Table -->
+  <div class="bg-white rounded-xl p-5 shadow-sm">
+    <h2 class="text-sm font-semibold text-gray-700 mb-4">🏷️ 成色对比</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm" id="condition-table">
+        <thead>
+          <tr class="text-left text-gray-400 border-b">
+            <th class="pb-2 pr-4">成色</th>
+            <th class="pb-2 pr-4">成交量</th>
+            <th class="pb-2 pr-4">均价</th>
+            <th class="pb-2 pr-4">最低</th>
+            <th class="pb-2 pr-4">最高</th>
+            <th class="pb-2">平均售出天数</th>
+          </tr>
+        </thead>
+        <tbody id="condition-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Recent Sales -->
+  <div class="bg-white rounded-xl p-5 shadow-sm">
+    <h2 class="text-sm font-semibold text-gray-700 mb-4">🕐 最近成交</h2>
+    <div class="space-y-3" id="recent-list"></div>
+  </div>
+
+</main>
+
+<script>
+const COND_COLORS = {
+  '全新': '#ef4444', '99新': '#f97316', '98新': '#eab308',
+  '95新': '#22c55e', '9新': '#3b82f6', '85新': '#8b5cf6',
+  '8新': '#6b7280', '7新': '#9ca3af', '8新以下': '#9ca3af', '未知': '#d1d5db'
+};
+
+function getCondColor(cond) { return COND_COLORS[cond] || '#9ca3af'; }
+
+function getScoreColor(score) {
+  if (score >= 95) return '#22c55e';
+  if (score >= 85) return '#3b82f6';
+  if (score >= 70) return '#f59e0b';
+  return '#ef4444';
+}
+
+async function loadDetail() {
+  const params = new URLSearchParams(location.search);
+  const model = params.get('model');
+  if (!model) { location.href = 'index.html'; return; }
+
+  document.getElementById('model-name').textContent = model;
+  document.title = `${model} — 球拍行情价`;
+
+  try {
+    const safeName = model.replace(/ /g, '_').replace(/\//g, '_');
+    const resp = await fetch(`data/${safeName}.json`);
+    if (!resp.ok) throw new Error('not found');
+    const data = await resp.json();
+
+    renderSummary(data);
+    renderConditionCards(data.by_condition);
+    renderPriceDistChart(data.recent_records);
+    renderTrendChart(data.condition_trends);
+    renderConditionTable(data.by_condition);
+    renderRecent(data.recent_records);
+  } catch(e) {
+    document.getElementById('model-summary').textContent = '暂无数据';
+  }
+}
+
+function renderSummary(data) {
+  const severe = data.recent_records?.filter(r => r.condition_severe).length || 0;
+  let extra = '';
+  if (severe > 0) extra = ` · ⚠️ ${severe}条有严重问题`;
+  document.getElementById('model-summary').textContent =
+    `共 ${data.total_sales} 笔成交记录 · 更新于 ${(data.exported_at||'').slice(0,10)}${extra}`;
+}
+
+function renderConditionCards(conditions) {
+  const container = document.getElementById('condition-cards');
+  if (!conditions?.length) { container.innerHTML = '<p class="text-gray-400 text-sm">暂无成色数据</p>'; return; }
+
+  container.innerHTML = conditions.map(c => `
+    <div class="bg-white rounded-lg p-4 shadow-sm text-center">
+      <span class="cond-badge" style="background:${getCondColor(c.condition)}20; color:${getCondColor(c.condition)}">${c.condition || '未知'}</span>
+      <div class="text-xl font-bold text-gray-800 mt-2">¥${c.avg_price}</div>
+      <div class="text-xs text-gray-400 mt-1">${c.count}笔 · ¥${c.min_price}~¥${c.max_price}</div>
+    </div>
+  `).join('');
+}
+
+function renderPriceDistChart(records) {
+  const el = document.getElementById('price-dist-chart');
+  if (!records?.length) { el.innerHTML = '<p class="text-gray-400 text-center py-10">暂无数据</p>'; return; }
+
+  // 按成色分组
+  const groups = {};
+  records.forEach(r => {
+    const cond = r.condition || '未知';
+    if (!groups[cond]) groups[cond] = [];
+    groups[cond].push(r.price);
+  });
+
+  const chart = echarts.init(el);
+  const series = Object.entries(groups).map(([cond, prices]) => ({
+    name: cond,
+    type: 'scatter',
+    symbolSize: 8,
+    itemStyle: { color: getCondColor(cond), opacity: 0.7 },
+    data: prices.map((p, i) => [i, p]),
+  }));
+
+  chart.setOption({
+    tooltip: {
+      trigger: 'item',
+      formatter: p => `${p.seriesName}: ¥${p.value[1]}`
+    },
+    legend: { top: 0, textStyle: { fontSize: 12, color: '#6b7280' } },
+    grid: { left: 50, right: 20, top: 40, bottom: 30 },
+    xAxis: { show: false },
+    yAxis: {
+      type: 'value',
+      axisLabel: { fontSize: 11, color: '#9ca3af', formatter: '¥{value}' },
+      splitLine: { lineStyle: { color: '#f3f4f6' } }
+    },
+    series: series,
+  });
+  window.addEventListener('resize', () => chart.resize());
+}
+
+function renderTrendChart(trends) {
+  const el = document.getElementById('trend-chart');
+  if (!trends || !Object.keys(trends).length) { el.innerHTML = '<p class="text-gray-400 text-center py-10">暂无趋势数据</p>'; return; }
+
+  const chart = echarts.init(el);
+  const conditions = Object.keys(trends);
+
+  // 合并所有日期
+  const allDates = new Set();
+  conditions.forEach(c => trends[c].dates.forEach(d => allDates.add(d)));
+  const dates = [...allDates].sort();
+
+  const series = conditions.map(cond => ({
+    name: cond,
+    type: 'line',
+    smooth: true,
+    symbol: 'circle',
+    symbolSize: 6,
+    lineStyle: { width: 2.5 },
+    itemStyle: { color: getCondColor(cond) },
+    data: dates.map(d => {
+      const idx = trends[cond].dates.indexOf(d);
+      return idx >= 0 ? trends[cond].prices[idx] : null;
+    }),
+  }));
+
+  chart.setOption({
+    tooltip: {
+      trigger: 'axis',
+      backgroundColor: 'rgba(255,255,255,0.95)',
+      borderColor: '#e5e7eb',
+      textStyle: { color: '#374151', fontSize: 12 },
+      formatter: function(params) {
+        let html = `<div style="font-weight:600;margin-bottom:4px">${params[0].axisValue}</div>`;
+        params.forEach(p => {
+          if (p.value !== null) {
+            html += `<div style="display:flex;align-items:center;gap:6px;font-size:12px">
+              <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${p.color}"></span>
+              ${p.seriesName}: <b>¥${p.value}</b></div>`;
+          }
+        });
+        return html;
+      }
+    },
+    legend: { top: 0, textStyle: { fontSize: 12, color: '#6b7280' } },
+    grid: { left: 50, right: 20, top: 40, bottom: 30 },
+    xAxis: { type: 'category', data: dates, axisLabel: { fontSize: 11, color: '#9ca3af' }, axisLine: { lineStyle: { color: '#e5e7eb' } } },
+    yAxis: { type: 'value', axisLabel: { fontSize: 11, color: '#9ca3af', formatter: '¥{value}' }, splitLine: { lineStyle: { color: '#f3f4f6' } } },
+    series: series,
+  });
+
+  window.addEventListener('resize', () => chart.resize());
+}
+
+function renderConditionTable(conditions) {
+  const tbody = document.getElementById('condition-tbody');
+  if (!conditions?.length) { tbody.innerHTML = '<tr><td class="py-4 text-gray-400" colspan="6">暂无数据</td></tr>'; return; }
+
+  tbody.innerHTML = conditions.map(c => `
+    <tr class="border-b border-gray-50">
+      <td class="py-3 pr-4"><span class="cond-badge" style="background:${getCondColor(c.condition)}20;color:${getCondColor(c.condition)}">${c.condition || '未知'}</span></td>
+      <td class="py-3 pr-4">${c.count}</td>
+      <td class="py-3 pr-4 font-semibold">¥${c.avg_price}</td>
+      <td class="py-3 pr-4 text-green-600">¥${c.min_price}</td>
+      <td class="py-3 pr-4 text-red-500">¥${c.max_price}</td>
+      <td class="py-3">${c.avg_days || '-'}天</td>
+    </tr>
+  `).join('');
+}
+
+function renderRecent(records) {
+  const container = document.getElementById('recent-list');
+  if (!records?.length) { container.innerHTML = '<p class="text-gray-400 text-sm">暂无成交记录</p>'; return; }
+
+  container.innerHTML = records.slice(0, 30).map(r => {
+    const cond = r.condition || '-';
+    const score = r.condition_score || 0;
+    const claimed = r.condition_claimed || '';
+    const evidence = r.condition_evidence || [];
+    const severe = r.condition_severe;
+
+    // 成色评分条
+    let scoreBar = '';
+    if (score > 0) {
+      const scoreColor = getScoreColor(score);
+      scoreBar = `
+        <div class="flex items-center gap-2 mt-1">
+          <div class="score-bar flex-1" style="max-width:80px">
+            <div class="score-fill" style="width:${score}%;background:${scoreColor}"></div>
+          </div>
+          <span class="text-xs" style="color:${scoreColor}">${score}分</span>
+        </div>`;
+    }
+
+    // 虚标警告
+    let claimedBadge = '';
+    if (claimed && claimed !== cond) {
+      claimedBadge = `<span class="evidence-tag bg-red-50 text-red-500">卖家标${claimed}</span>`;
+    }
+
+    // 严重问题警告
+    let severeTag = '';
+    if (severe) {
+      severeTag = `<span class="evidence-tag bg-red-100 text-red-600">⚠️严重</span>`;
+    }
+
+    // 证据标签
+    let evidenceTags = '';
+    if (evidence.length > 0) {
+      evidenceTags = `<div class="flex flex-wrap gap-1 mt-1">` +
+        evidence.slice(0, 4).map(e => {
+          const isNeg = e.includes('扣') || e.includes('掉漆') || e.includes('磕碰') || e.includes('翻新') || e.includes('塌陷') || e.includes('修复');
+          const cls = isNeg ? 'bg-orange-50 text-orange-600' : 'bg-green-50 text-green-600';
+          return `<span class="evidence-tag ${cls}">${e}</span>`;
+        }).join('') +
+        `</div>`;
+    }
+
+    return `
+      <div class="py-3 border-b border-gray-50">
+        <div class="flex items-center justify-between">
+          <div class="flex-1 min-w-0 flex items-center gap-2">
+            <span class="cond-badge flex-shrink-0" style="background:${getCondColor(cond)}20;color:${getCondColor(cond)}">${cond}</span>
+            ${claimedBadge}${severeTag}
+            <span class="text-gray-600 truncate text-sm">${r.title}</span>
+          </div>
+          <div class="flex items-center gap-3 ml-4 flex-shrink-0">
+            <span class="text-gray-400 text-xs">${r.sold_time || ''}</span>
+            <span class="font-bold text-red-500">¥${r.price}</span>
+          </div>
+        </div>
+        ${scoreBar}
+        ${evidenceTags}
+      </div>
+    `;
+  }).join('');
+}
+
+loadDetail();
+</script>
+</body>
+</html>

@@ -1,0 +1,897 @@
+{
+  "ASTROX 99 PRO": {
+    "brand": "YONEX",
+    "aliases": [
+      "天斧99Pro",
+      "ASTROX99Pro",
+      "AX99Pro"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "NANOFLARE 800 PRO": {
+    "brand": "YONEX",
+    "aliases": [
+      "疾光800pro",
+      "NF800PRO",
+      "NF-800PRO",
+      "NF-800P",
+      "疾光NF800PRO"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "VOLTRIC Z-FORCE II": {
+    "brand": "YONEX",
+    "aliases": [
+      "VTZF2LD",
+      "白林丹",
+      "VTZF2",
+      "ZF2"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 33": {
+    "brand": "YONEX",
+    "aliases": [
+      "天斧33",
+      "ASTROX33",
+      "AX33",
+      "AX33YX"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "NANORAY 900": {
+    "brand": "YONEX",
+    "aliases": [
+      "锐速900",
+      "NR900AH",
+      "NR900SE"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 100 GAME VA": {
+    "brand": "YONEX",
+    "aliases": [
+      "100GAME安赛龙",
+      "天斧100VAGAME",
+      "AX-100GEX"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 77 PRO": {
+    "brand": "YONEX",
+    "aliases": [
+      "天斧77pro",
+      "77PRO",
+      "天斧77PRO"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "NANOFLARE 700 TOUR": {
+    "brand": "YONEX",
+    "aliases": [
+      "NF-700TEX",
+      "NF700TOUR",
+      "疾光700TOUR"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 99 TOUR": {
+    "brand": "YONEX",
+    "aliases": [
+      "AX99三代TOUR",
+      "天斧99三代TOUR"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 88S PRO": {
+    "brand": "YONEX",
+    "aliases": [
+      "天斧88SP",
+      "AX88S-P",
+      "AX88SP",
+      "88SPRO",
+      "AX88SPRO",
+      "天斧88SPRO"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 3 DG ST": {
+    "brand": "YONEX",
+    "aliases": [
+      "天斧3DGST",
+      "AX3DGST"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "NANOFLARE 1000 TOUR": {
+    "brand": "YONEX",
+    "aliases": [
+      "疾光1000TUOR",
+      "NF1000TOUR"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "DUORA 10 LCW": {
+    "brand": "YONEX",
+    "aliases": [
+      "duora10lcw",
+      "双刃10LCW"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 99": {
+    "brand": "YONEX",
+    "aliases": [
+      "天斧99",
+      "ASTROX99",
+      "AX99",
+      "AX99YX"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 99 LCW": {
+    "brand": "YONEX",
+    "aliases": [
+      "天斧99LCW",
+      "AX99LCW",
+      "AX99LCWTEX"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "DUORA 10 YX": {
+    "brand": "YONEX",
+    "aliases": [
+      "Duora10",
+      "双刃10",
+      "DUO10YX",
+      "duora10lv"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 77": {
+    "brand": "YONEX",
+    "aliases": [
+      "天斧77",
+      "ASTROX77",
+      "AX77YX",
+      "AX77"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 88D PRO": {
+    "brand": "YONEX",
+    "aliases": [
+      "天斧88dpro",
+      "AX88DPRO",
+      "天斧88DP",
+      "AX88D-P",
+      "AX88DP",
+      "88DPRO",
+      "天斧88D PRO"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 99 三代": {
+    "brand": "YONEX",
+    "aliases": [
+      "天斧99三代",
+      "AX99三代",
+      "天斧99PRO二代",
+      "99PRO二代"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "NANOSPEED 9000 Type S": {
+    "brand": "YONEX",
+    "aliases": [
+      "NS9000S"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 100ZZ VA": {
+    "brand": "YONEX",
+    "aliases": [
+      "100ZZ安赛龙",
+      "100ZZVA",
+      "100VAZZ"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 100ZZ": {
+    "brand": "YONEX",
+    "aliases": [
+      "天斧100ZZ",
+      "AX100ZZ"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "DUORA Z-STRIKE": {
+    "brand": "YONEX",
+    "aliases": [
+      "DZS",
+      "双刃ZS",
+      "DUORAZS",
+      "党支书"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "NANOFLARE 800 TOUR": {
+    "brand": "YONEX",
+    "aliases": [
+      "NF800TOUR",
+      "疾光NF-800 TOUR",
+      "疾光800tour",
+      "NF-800TOUR"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ASTROX 70": {
+    "brand": "YONEX",
+    "aliases": [
+      "天斧70",
+      "AX70"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "NANOFLARE 800 GAME": {
+    "brand": "YONEX",
+    "aliases": [
+      "疾光800GAME",
+      "NF800GAME"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "NANOFLARE 800 PLAY": {
+    "brand": "YONEX",
+    "aliases": [
+      "疾光800PLAY",
+      "NF800PLAY"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ARCSABER 11 PRO": {
+    "brand": "YONEX",
+    "aliases": [
+      "弓箭11PRO",
+      "ARC11PRO"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ARCSABER 11": {
+    "brand": "YONEX",
+    "aliases": [
+      "弓箭11",
+      "ARC11"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "ARCSABER 7 PRO": {
+    "brand": "YONEX",
+    "aliases": [
+      "弓箭7PRO",
+      "ARC7PRO"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "NANOFLARE 1000 Z": {
+    "brand": "YONEX",
+    "aliases": [
+      "疾光1000Z",
+      "NF1000Z"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "NANOFLARE 700 PRO": {
+    "brand": "YONEX",
+    "aliases": [
+      "疾光700PRO",
+      "NF700PRO"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "VOLTRIC LD-FORCE": {
+    "brand": "YONEX",
+    "aliases": [
+      "LD-Force",
+      "林丹力"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER F": {
+    "brand": "VICTOR",
+    "aliases": [
+      "黑金隼",
+      "黑隼",
+      "TKF隼",
+      "突击隼",
+      "TK-F隼"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER RYUGA": {
+    "brand": "VICTOR",
+    "aliases": [
+      "龙牙之刃",
+      "TK-RYUGA",
+      "TK龙牙",
+      "龙牙"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AURASPEED HS PLUS": {
+    "brand": "VICTOR",
+    "aliases": [
+      "极音速",
+      "神速HSplus",
+      "ARSHSPLUS",
+      "ARS-HSPLUS"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AURASPEED 100X": {
+    "brand": "VICTOR",
+    "aliases": [
+      "神速100X",
+      "ARS100X",
+      "AURASPEED100X",
+      "ARS-100X",
+      "100X"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER K 30": {
+    "brand": "VICTOR",
+    "aliases": [
+      "TK30",
+      "突击30",
+      "TK-30",
+      "小鬼斩"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "DriveX 12 ZSW": {
+    "brand": "VICTOR",
+    "aliases": [
+      "DX-12ZSW",
+      "驭12郑思维"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AURASPEED FANTOME": {
+    "brand": "VICTOR",
+    "aliases": [
+      "神速影刃",
+      "ARS影刃",
+      "影刃"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AURASPEED-LYC": {
+    "brand": "VICTOR",
+    "aliases": [
+      "神速LYC",
+      "ARS-LYC",
+      "神速刘雨辰"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AURASPEED PANTHER": {
+    "brand": "VICTOR",
+    "aliases": [
+      "神速影豹",
+      "ARS-PANTHER",
+      "小影刃"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "DriveX 12": {
+    "brand": "VICTOR",
+    "aliases": [
+      "驭12",
+      "DriveX12",
+      "DX-12",
+      "DX12"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER K BOOM": {
+    "brand": "VICTOR",
+    "aliases": [
+      "突击BOOM",
+      "突击音爆",
+      "TKBOOM",
+      "TK-BOOM"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "JETSPEED S 12 FTD": {
+    "brand": "VICTOR",
+    "aliases": [
+      "JS12FTDJ",
+      "极速12FTDJ",
+      "JS-12FTDJ"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AURASPEED 100X SE": {
+    "brand": "VICTOR",
+    "aliases": [
+      "神速100XSE",
+      "ARS-100XSE",
+      "ARS100XSE"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AURASPEED HS PLUS HENDRA": {
+    "brand": "VICTOR",
+    "aliases": [
+      "极音速亨德拉",
+      "ARSHSPLUS"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER F SE": {
+    "brand": "VICTOR",
+    "aliases": [
+      "TKFSE",
+      "黑金隼se",
+      "TK-F"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER K 10": {
+    "brand": "VICTOR",
+    "aliases": [
+      "TK-10",
+      "TK10C",
+      "TK-10C"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER RYUGA II PRO": {
+    "brand": "VICTOR",
+    "aliases": [
+      "龙牙2PRO",
+      "龙牙之刃2PRO"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AURASPEED 99": {
+    "brand": "VICTOR",
+    "aliases": [
+      "神速99",
+      "ARS99",
+      "ARS-99"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER HAWK": {
+    "brand": "VICTOR",
+    "aliases": [
+      "小隼",
+      "白金小隼",
+      "TKHAWK"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "METEOR X 80N": {
+    "brand": "VICTOR",
+    "aliases": [
+      "尖锋80N",
+      "MX80N",
+      "MX-80N"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER RYUGA METALLIC": {
+    "brand": "VICTOR",
+    "aliases": [
+      "黑龙牙",
+      "龙牙M",
+      "TK-RYUGAMETALLIC"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "JETSPEED S 10": {
+    "brand": "VICTOR",
+    "aliases": [
+      "极速10",
+      "JS-10",
+      "JS10",
+      "黑金刀",
+      "极速10C",
+      "JS10C"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "JETSPEED S 12 II": {
+    "brand": "VICTOR",
+    "aliases": [
+      "极速12II",
+      "JS-12II",
+      "极速12二代"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER F C Ultra CX": {
+    "brand": "VICTOR",
+    "aliases": [
+      "黑金利爪",
+      "TK-FCUcx",
+      "TK-FCUltracx"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER RYUGA II": {
+    "brand": "VICTOR",
+    "aliases": [
+      "TK-RYUGAll",
+      "龙牙2",
+      "龙牙之刃2"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER HMR PRO": {
+    "brand": "VICTOR",
+    "aliases": [
+      "大铁锤PRO",
+      "TKHMRPRO",
+      "TK-HMRPRO"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER K T500": {
+    "brand": "VICTOR",
+    "aliases": [
+      "TKT500",
+      "突击T500",
+      "TK-T500",
+      "黑武士"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "HYPERNANO X 990": {
+    "brand": "VICTOR",
+    "aliases": [
+      "HX-990",
+      "HX990"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "JETSPEED S 12": {
+    "brand": "VICTOR",
+    "aliases": [
+      "极速12",
+      "JS-12",
+      "JS12"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "DriveX 9X": {
+    "brand": "VICTOR",
+    "aliases": [
+      "驭9X",
+      "DX-9X",
+      "DX9X"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "THRUSTER K ONIGIRI": {
+    "brand": "VICTOR",
+    "aliases": [
+      "鬼斩",
+      "TK-ONIGIRI"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AURASPEED 98K": {
+    "brand": "VICTOR",
+    "aliases": [
+      "神速98K",
+      "ARS-98K"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AURASPEED 90K": {
+    "brand": "VICTOR",
+    "aliases": [
+      "神速90K",
+      "ARS-90K"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AURASPEED 90S": {
+    "brand": "VICTOR",
+    "aliases": [
+      "神速90S",
+      "ARS-90S"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "JETSPEED S 12 F": {
+    "brand": "VICTOR",
+    "aliases": [
+      "极速12F",
+      "JS-12F"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "BRAVE SWORD 12": {
+    "brand": "VICTOR",
+    "aliases": [
+      "亮剑12",
+      "BS12"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "METEOR X 80": {
+    "brand": "VICTOR",
+    "aliases": [
+      "尖锋80",
+      "MX80",
+      "MX-80"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "SUPER NANO 7": {
+    "brand": "VICTOR",
+    "aliases": [
+      "超级纳米7",
+      "SN7"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "BRAVE SWORD 12 N": {
+    "brand": "VICTOR",
+    "aliases": [
+      "亮剑12N",
+      "BS12N"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "BRAVE SWORD 11": {
+    "brand": "VICTOR",
+    "aliases": [
+      "亮剑11",
+      "BS11"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "HYPERNANO X 7SP": {
+    "brand": "VICTOR",
+    "aliases": [
+      "HX-7SP",
+      "HX7SP"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "战戟8000": {
+    "brand": "李宁",
+    "aliases": [
+      "AYPT013",
+      "HALBERTEC8000",
+      "战戟8000",
+      "H8000"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "雷霆90NEW": {
+    "brand": "李宁",
+    "aliases": [
+      "AXFORCE90NEW",
+      "AYPV001",
+      "雷霆90"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "战戟9000 Power": {
+    "brand": "李宁",
+    "aliases": [
+      "AYPW001",
+      "战戟9000P"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "雷霆80": {
+    "brand": "李宁",
+    "aliases": [
+      "AYPS002",
+      "AXFORCE80",
+      "雷霆80",
+      "AF80"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "锋影800 POWER": {
+    "brand": "李宁",
+    "aliases": [
+      "锋影800POWER",
+      "BLADEX800POWER",
+      "锋影800P"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "雷霆100": {
+    "brand": "李宁",
+    "aliases": [
+      "AXFORCE100",
+      "AF100",
+      "AYPT235"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "锋影900New": {
+    "brand": "李宁",
+    "aliases": [
+      "BLADEX900NEW",
+      "AYPV085",
+      "锋影900"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "锋影880": {
+    "brand": "李宁",
+    "aliases": [
+      "BLADEX880",
+      "AWPW051"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "WindStorm 72": {
+    "brand": "李宁",
+    "aliases": [
+      "WS72S",
+      "WS72P",
+      "风暴72"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AERONAUT 9000": {
+    "brand": "李宁",
+    "aliases": [
+      "AYPP124",
+      "风动9000"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AERONAUT 8000": {
+    "brand": "李宁",
+    "aliases": [
+      "风动8000",
+      "AERONAUT8000"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "雷霆小钢炮": {
+    "brand": "李宁",
+    "aliases": [
+      "AYPT307",
+      "AYPT311"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "战戟5000": {
+    "brand": "李宁",
+    "aliases": [
+      "AYPT373",
+      "战戟5000"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "雷霆80 CL": {
+    "brand": "李宁",
+    "aliases": [
+      "AXFORCE80CL",
+      "雷霆80CL",
+      "AF80CL"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "战戟9000": {
+    "brand": "李宁",
+    "aliases": [
+      "HALBERTEC9000",
+      "战戟9000"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "3D CALIBAR 500": {
+    "brand": "李宁",
+    "aliases": [
+      "风刃500",
+      "AYPM388"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "3D CALIBAR 900C": {
+    "brand": "李宁",
+    "aliases": [
+      "风刃900C",
+      "AYPM438"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "TECTONIC 9": {
+    "brand": "李宁",
+    "aliases": [
+      "突袭9",
+      "AYPR130"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "3D CALIBAR 900B": {
+    "brand": "李宁",
+    "aliases": [
+      "AYPM428",
+      "风刃900B"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "雷霆50": {
+    "brand": "李宁",
+    "aliases": [
+      "AYPS047",
+      "AXFORCE50",
+      "雷霆50"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "3D CALIBAR 500 PRO": {
+    "brand": "李宁",
+    "aliases": [
+      "风刃500PRO"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "AERONAUT 9000C": {
+    "brand": "李宁",
+    "aliases": [
+      "风动9000C"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "3D CALIBAR 900": {
+    "brand": "李宁",
+    "aliases": [
+      "风刃900",
+      "3DCALIBAR900"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "3D CALIBAR 900I": {
+    "brand": "李宁",
+    "aliases": [
+      "风刃900I",
+      "风刃900i"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "WOODS N90": {
+    "brand": "李宁",
+    "aliases": [
+      "N90",
+      "woods90"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "WOODS N90 II": {
+    "brand": "李宁",
+    "aliases": [
+      "N90二代",
+      "N90II"
+    ],
+    "source": "badmintoncn.com"
+  },
+  "NANOFLARE 800": {
+    "brand": "YONEX",
+    "aliases": [
+      "疾光800",
+      "NF800",
+      "NANOFLARE800",
+      "NANOFLARE 800",
+      "NF-800",
+      "疾光800 "
+    ],
+    "source": "badmintoncn.com + 手动补充"
+  }
+}

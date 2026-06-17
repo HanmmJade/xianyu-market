@@ -1,0 +1,17 @@
+{
+  "api": "mtop.common.getTimestamp",
+  "url": "http://acs.m.taobao.com/gw/mtop.common.getTimestamp/*",
+  "method": "GET",
+  "status": 200,
+  "size": 97,
+  "keywords": [],
+  "timestamp": "2026-06-15 00:51:44",
+  "request_headers": {
+    "Connection": "close",
+    "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 16; 2211133C Build/BP2A.250605.031.A3)",
+    "Host": "acs.m.taobao.com",
+    "Accept-Encoding": "gzip"
+  },
+  "request_content": "",
+  "response_body": "{\"api\":\"mtop.common.getTimestamp\",\"v\":\"*\",\"ret\":[\"SUCCESS::接口调用成功\"],\"data\":{\"t\":\"1781455906498\"}}"
+}

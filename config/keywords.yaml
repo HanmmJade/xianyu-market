@@ -1,0 +1,99 @@
+# 球拍关键词配置 v2
+# name: 标准型号名（用于数据库存储）
+# aliases: 搜索关键词/别名列表（每个alias是一次独立搜索，覆盖不同卖家写法）
+# brand: 品牌
+#
+# 设计原则：
+# - aliases之间尽量不重复（避免搜到相同结果）
+# - 覆盖中文名、英文缩写、全称等不同写法
+# - 每个alias控制在20字以内（闲鱼搜索框限制）
+
+keywords:
+  # ── YONEX ──────────────────────────────
+  - name: "疾光NF800PRO"
+    aliases:
+      - "nf800pro"           # 英文缩写最常见
+      - "疾光800pro"          # 中文名+英文
+      - "nf800 pro"           # 带空格写法
+      - "NANOFLARE 800 PRO"   # 官方全称
+    brand: "YONEX"
+
+  - name: "天斧88D PRO"
+    aliases:
+      - "88dpro"
+      - "天斧88d pro"
+      - "88dp"
+      - "天斧88D"
+    brand: "YONEX"
+
+  - name: "天斧100ZZ"
+    aliases:
+      - "100zz"
+      - "天斧100zz"
+      - "AX100ZZ"
+    brand: "YONEX"
+
+  - name: "天斧77PRO"
+    aliases:
+      - "77pro"
+      - "天斧77pro"
+      - "77p"
+      - "天斧77P"
+    brand: "YONEX"
+
+  - name: "弓箭11PRO"
+    aliases:
+      - "arc11pro"
+      - "弓箭11pro"
+      - "ARC11PRO"
+    brand: "YONEX"
+
+  # ── 李宁 ──────────────────────────────
+  - name: "风刃900"
+    aliases:
+      - "风刃900"
+      - "李宁风刃900"
+      - "calibar 900"
+    brand: "李宁"
+
+  - name: "风刃900i"
+    aliases:
+      - "风刃900i"
+      - "风刃900I"
+      - "calibar 900i"
+    brand: "李宁"
+
+  - name: "雷霆80"
+    aliases:
+      - "雷霆80"
+      - "雷霆80PRO"
+      - "axforce 80"
+    brand: "李宁"
+
+  - name: "战戟8000"
+    aliases:
+      - "战戟8000"
+      - "halbertec 8000"
+    brand: "李宁"
+
+  # ── VICTOR ─────────────────────────────
+  - name: "神速100X"
+    aliases:
+      - "神速100X"
+      - "神速100x"
+      - "ARS100X"
+    brand: "VICTOR"
+
+  - name: "龙牙之刃"
+    aliases:
+      - "龙牙之刃"
+      - "龙牙"
+      - "龙牙一代"
+    brand: "VICTOR"
+
+  - name: "极速10"
+    aliases:
+      - "极速10"
+      - "JS10"
+      - "极速10Q"
+    brand: "VICTOR"
