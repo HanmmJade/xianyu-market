@@ -23,12 +23,21 @@ jobs:
       - name: 安装依赖
         run: |
           pip install -r requirements.txt
+          pip install playwright
+          playwright install chromium
           
       - name: 运行爬虫更新数据
         env:
           XIANYU_HEADLESS: 'true'
         run: |
-          python main.py pipeline --headless --crawler mtop
+          # 初始化数据库
+          python main.py init-db
+          
+          # 运行爬虫采集数据
+          python main.py crawl --headless
+          
+          # 导出JSON数据
+          python main.py export
           
       - name: 复制数据到前端
         run: |
@@ -42,3 +51,4 @@ jobs:
           file_pattern: |
             web/data/*.json
             web-app/public/data/*.json
+            data/xianyu.db
