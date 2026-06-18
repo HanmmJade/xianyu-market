@@ -6,8 +6,11 @@
       "use": "@vercel/python"
     },
     {
-      "src": "web/**",
-      "use": "@vercel/static"
+      "src": "web-app/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
     }
   ],
   "routes": [
@@ -24,22 +27,12 @@
       "dest": "api/index.py"
     },
     {
-      "src": "/data/(.*)",
-      "dest": "/web/data/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=3600, s-maxage=86400"
-      }
-    },
-    {
       "src": "/assets/(.*)",
-      "dest": "/web/assets/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
-      }
+      "dest": "/web-app/dist/assets/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/web/$1"
+      "dest": "/web-app/dist/$1"
     }
   ],
   "rewrites": [
@@ -51,16 +44,7 @@
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" },
         { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
-        { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" }
-      ]
-    },
-    {
-      "source": "/data/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=86400" }
+        { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" }
       ]
     }
   ]
