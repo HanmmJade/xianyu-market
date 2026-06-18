@@ -1,6 +1,6 @@
 {
   "model": "雷霆80",
-  "total_sales": 19,
+  "total_sales": 24,
   "by_condition": [
     {
       "condition": "全新",
@@ -8,6 +8,14 @@
       "avg_price": 1050.0,
       "min_price": 780.0,
       "max_price": 1900.0,
+      "avg_days": null
+    },
+    {
+      "condition": "未知",
+      "count": 5,
+      "avg_price": 610.0,
+      "min_price": 550.0,
+      "max_price": 699.0,
       "avg_days": null
     },
     {
@@ -229,7 +237,62 @@
       "days_to_sell": null,
       "title": "k520pro加羽毛球拍 8成新 无断点 雷鸣58线 25磅 打感舒服 拍框有点掉漆 正常使用痕迹 手胶熏风KG-30 底胶还在 可小刀 送拍袋 包邮 支持自提 喜欢直接拍 细节私聊",
       "condition_evidence": []
+    },
+    {
+      "price": 599.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "雷霆80 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 614.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "雷霆80 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 590.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "雷霆80 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 550.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "雷霆80 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 699.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "雷霆80 二手球拍",
+      "condition_evidence": []
     }
   ],
-  "exported_at": "2026-06-14T23:03:36.373627"
+  "exported_at": "2026-06-17T19:13:46.862024"
 }

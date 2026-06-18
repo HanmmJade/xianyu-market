@@ -91,8 +91,24 @@ class MtopCrawler:
 
         # 打开首页让 mtop 初始化
         await self.page.goto("https://www.goofish.com/", wait_until="domcontentloaded", timeout=self.timeout)
-        await asyncio.sleep(3)
-        logger.info("浏览器已启动，mtop 已初始化")
+
+        # 等待 mtop 库加载完成（最多等 15 秒）
+        for i in range(15):
+            mtop_ready = await self.page.evaluate("() => !!window.lib?.mtop")
+            if mtop_ready:
+                break
+            await asyncio.sleep(1)
+
+        if not mtop_ready:
+            logger.warning("mtop 库未加载，尝试刷新页面...")
+            await self.page.reload(wait_until="domcontentloaded", timeout=self.timeout)
+            await asyncio.sleep(5)
+            mtop_ready = await self.page.evaluate("() => !!window.lib?.mtop")
+
+        if mtop_ready:
+            logger.info("浏览器已启动，mtop 已就绪")
+        else:
+            logger.error("mtop 库加载失败，请检查登录状态")
 
     async def save_cookies(self):
         """保存 Cookie"""

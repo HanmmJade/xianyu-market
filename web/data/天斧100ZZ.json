@@ -1,6 +1,6 @@
 {
   "model": "天斧100ZZ",
-  "total_sales": 30,
+  "total_sales": 35,
   "by_condition": [
     {
       "condition": "全新",
@@ -16,6 +16,14 @@
       "avg_price": 1355.0,
       "min_price": 960.0,
       "max_price": 2150.0,
+      "avg_days": null
+    },
+    {
+      "condition": "未知",
+      "count": 5,
+      "avg_price": 1163.0,
+      "min_price": 1000.0,
+      "max_price": 1389.0,
       "avg_days": null
     },
     {
@@ -399,7 +407,62 @@
       "days_to_sell": null,
       "title": "天斧100zz古红色 AX100zz 最高配定制球拍 尤尼克斯 质量打感都无敌 厂家测试了很多遍 有的打感不输原拍（代购）",
       "condition_evidence": []
+    },
+    {
+      "price": 1099.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "天斧100ZZ 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1000.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "天斧100ZZ 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1200.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "天斧100ZZ 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1389.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "天斧100ZZ 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1125.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "天斧100ZZ 二手球拍",
+      "condition_evidence": []
     }
   ],
-  "exported_at": "2026-06-14T23:03:36.340378"
+  "exported_at": "2026-06-17T19:13:46.847221"
 }

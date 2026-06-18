@@ -1,7 +1,15 @@
 {
   "model": "极速10",
-  "total_sales": 20,
+  "total_sales": 22,
   "by_condition": [
+    {
+      "condition": "未知",
+      "count": 2,
+      "avg_price": 1125.0,
+      "min_price": 1099.0,
+      "max_price": 1150.0,
+      "avg_days": null
+    },
     {
       "condition": "全新",
       "count": 9,
@@ -240,7 +248,29 @@
       "days_to_sell": null,
       "title": "胜利Js10Q西瓜刀4ug5，全新未拆封，带半年质保，正品带 吊牌和原包装，京东自营购入，放心入。Q系列进攻型拍框，挥拍快，控球好，适合喜欢进攻的球友。包装袋、合格证、说明书全套都在，收藏自用都合适。#羽毛球拍   全新正品不退不换，喜欢直接拍，细节私聊正品",
       "condition_evidence": []
+    },
+    {
+      "price": 1099.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "极速10 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1150.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "极速10 二手球拍",
+      "condition_evidence": []
     }
   ],
-  "exported_at": "2026-06-14T23:03:36.352102"
+  "exported_at": "2026-06-17T19:13:46.874425"
 }

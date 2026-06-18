@@ -1,6 +1,6 @@
 {
   "model": "天斧88D PRO",
-  "total_sales": 40,
+  "total_sales": 45,
   "by_condition": [
     {
       "condition": "99新",
@@ -8,6 +8,14 @@
       "avg_price": 1120.0,
       "min_price": 1120.0,
       "max_price": 1120.0,
+      "avg_days": null
+    },
+    {
+      "condition": "未知",
+      "count": 5,
+      "avg_price": 1109.0,
+      "min_price": 1035.0,
+      "max_price": 1264.0,
       "avg_days": null
     },
     {
@@ -498,7 +506,62 @@
       "days_to_sell": null,
       "title": "天斧88dp三代 4ug6 二线无暇线晚上刚断 艺术家记者别 来 爽快包顺 售出非真假塌陷修复问题不退换 能当天确认再来",
       "condition_evidence": []
+    },
+    {
+      "price": 1050.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "天斧88D PRO 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1035.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "天斧88D PRO 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1090.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "天斧88D PRO 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1264.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "天斧88D PRO 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1106.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "天斧88D PRO 二手球拍",
+      "condition_evidence": []
     }
   ],
-  "exported_at": "2026-06-14T23:03:36.316396"
+  "exported_at": "2026-06-17T19:13:46.820491"
 }

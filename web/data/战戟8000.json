@@ -1,6 +1,6 @@
 {
   "model": "战戟8000",
-  "total_sales": 10,
+  "total_sales": 15,
   "by_condition": [
     {
       "condition": "99新",
@@ -16,6 +16,14 @@
       "avg_price": 692.0,
       "min_price": 599.0,
       "max_price": 799.0,
+      "avg_days": null
+    },
+    {
+      "condition": "未知",
+      "count": 5,
+      "avg_price": 610.0,
+      "min_price": 550.0,
+      "max_price": 699.0,
       "avg_days": null
     }
   ],
@@ -130,7 +138,62 @@
       "days_to_sell": null,
       "title": "首线未断李宁最性价比之王！控制拍战戟8000，4u5，日本线 皇科祖纳z63x，26磅，拍子底胶去过了拍套都在，今年5.20购买，质保还在，有一个瑕疵，其他没有任何问题，芝麻信用878，你值得拥有",
       "condition_evidence": []
+    },
+    {
+      "price": 599.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "战戟8000 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 614.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "战戟8000 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 590.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "战戟8000 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 550.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "战戟8000 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 699.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "战戟8000 二手球拍",
+      "condition_evidence": []
     }
   ],
-  "exported_at": "2026-06-14T23:03:36.402980"
+  "exported_at": "2026-06-17T19:13:46.927216"
 }

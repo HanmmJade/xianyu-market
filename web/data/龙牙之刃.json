@@ -1,7 +1,15 @@
 {
   "model": "龙牙之刃",
-  "total_sales": 18,
+  "total_sales": 20,
   "by_condition": [
+    {
+      "condition": "未知",
+      "count": 2,
+      "avg_price": 1125.0,
+      "min_price": 1099.0,
+      "max_price": 1150.0,
+      "avg_days": null
+    },
     {
       "condition": "99新",
       "count": 1,
@@ -234,7 +242,29 @@
       "days_to_sell": null,
       "title": "胜利黑龙牙羽毛球拍，黑红配色，3U G5规格，正品钢号可查， 假一赔十，保证无修无塌无陷，支持鉴定真假～\n\n拍子贴纸有点小瑕疵，两处掉漆，具体看图。两线了，现在拉的是28磅胜利线，拍面完整，手柄缠胶，整体成色还可以。\n\n暴力进攻型选手很适合，打感舒服，控球好。包邮，可自提，价格可聊，喜欢的朋友私聊看细节图～\n一堆事的别来，爽快的可以减钱送手胶\n售出不退不换，个别情况酌情考虑退款",
       "condition_evidence": []
+    },
+    {
+      "price": 1099.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "龙牙之刃 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1150.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "龙牙之刃 二手球拍",
+      "condition_evidence": []
     }
   ],
-  "exported_at": "2026-06-14T23:03:36.383415"
+  "exported_at": "2026-06-17T19:13:46.914740"
 }

@@ -1,7 +1,15 @@
 {
   "model": "神速100X",
-  "total_sales": 20,
+  "total_sales": 22,
   "by_condition": [
+    {
+      "condition": "未知",
+      "count": 2,
+      "avg_price": 1125.0,
+      "min_price": 1099.0,
+      "max_price": 1150.0,
+      "avg_days": null
+    },
     {
       "condition": "全新",
       "count": 6,
@@ -248,7 +256,29 @@
       "days_to_sell": null,
       "title": "99新威克多VICTOR ARS系列 ARS-100x tu c 全碳素 羽毛球拍 汤尤杯纪念款 速度型(增加挥速) 专业级 单拍 熊猫色 首胶首线 打过5次 限量版4U G5 正品保证 已经售出",
       "condition_evidence": []
+    },
+    {
+      "price": 1099.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "神速100X 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1150.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "神速100X 二手球拍",
+      "condition_evidence": []
     }
   ],
-  "exported_at": "2026-06-14T23:03:36.362886"
+  "exported_at": "2026-06-17T19:13:46.888472"
 }

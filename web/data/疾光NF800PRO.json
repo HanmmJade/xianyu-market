@@ -1,6 +1,6 @@
 {
   "model": "疾光NF800PRO",
-  "total_sales": 67,
+  "total_sales": 72,
   "by_condition": [
     {
       "condition": "",
@@ -8,6 +8,14 @@
       "avg_price": 1093.0,
       "min_price": 569.0,
       "max_price": 5000.0,
+      "avg_days": null
+    },
+    {
+      "condition": "未知",
+      "count": 5,
+      "avg_price": 927.0,
+      "min_price": 850.0,
+      "max_price": 1000.0,
       "avg_days": null
     },
     {
@@ -621,5 +629,5 @@
       "condition_evidence": []
     }
   ],
-  "exported_at": "2026-06-14T23:03:36.291969"
+  "exported_at": "2026-06-17T19:13:46.789370"
 }

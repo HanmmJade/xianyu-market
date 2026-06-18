@@ -1,6 +1,6 @@
 {
   "model": "弓箭11PRO",
-  "total_sales": 38,
+  "total_sales": 43,
   "by_condition": [
     {
       "condition": "8新",
@@ -8,6 +8,14 @@
       "avg_price": 1239.0,
       "min_price": 1239.0,
       "max_price": 1239.0,
+      "avg_days": null
+    },
+    {
+      "condition": "未知",
+      "count": 5,
+      "avg_price": 1038.0,
+      "min_price": 925.0,
+      "max_price": 1120.0,
       "avg_days": null
     },
     {
@@ -486,7 +494,62 @@
         "有磕碰(-5分)",
         "有掉漆(-5分)"
       ]
+    },
+    {
+      "price": 925.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "弓箭11PRO 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1088.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "弓箭11PRO 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1049.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "弓箭11PRO 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1120.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "弓箭11PRO 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 1010.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "弓箭11PRO 二手球拍",
+      "condition_evidence": []
     }
   ],
-  "exported_at": "2026-06-14T23:03:36.329092"
+  "exported_at": "2026-06-17T19:13:46.833737"
 }

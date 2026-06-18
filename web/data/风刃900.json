@@ -1,7 +1,15 @@
 {
   "model": "风刃900",
-  "total_sales": 16,
+  "total_sales": 21,
   "by_condition": [
+    {
+      "condition": "未知",
+      "count": 5,
+      "avg_price": 610.0,
+      "min_price": 550.0,
+      "max_price": 699.0,
+      "avg_days": null
+    },
     {
       "condition": "",
       "count": 16,
@@ -188,7 +196,62 @@
       "days_to_sell": null,
       "title": "风刃900李宁羽毛球拍，双钢号国行，s。2，底胶还在，二线微 暇，成色很好，瑕疵已上图，拉的65线25磅，保证正品，无修复无塌陷无补漆",
       "condition_evidence": []
+    },
+    {
+      "price": 599.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "风刃900 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 614.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "风刃900 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 590.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "风刃900 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 550.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "风刃900 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 699.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "风刃900 二手球拍",
+      "condition_evidence": []
     }
   ],
-  "exported_at": "2026-06-14T23:03:36.393174"
+  "exported_at": "2026-06-17T19:13:46.901800"
 }

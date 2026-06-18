@@ -1,6 +1,6 @@
 {
   "model": "风刃900i",
-  "total_sales": 10,
+  "total_sales": 15,
   "by_condition": [
     {
       "condition": "全新",
@@ -16,6 +16,14 @@
       "avg_price": 661.0,
       "min_price": 550.0,
       "max_price": 799.0,
+      "avg_days": null
+    },
+    {
+      "condition": "未知",
+      "count": 5,
+      "avg_price": 610.0,
+      "min_price": 550.0,
+      "max_price": 699.0,
       "avg_days": null
     }
   ],
@@ -130,7 +138,62 @@
       "days_to_sell": null,
       "title": "李宁高端羽毛球拍，老款风刃900i，26磅yy63线，，几处 磕碰（看图），外观有使用痕迹的，已去底，保真，闲鱼选购的现回回血。旧拍成色，老批次手感。漆水方面（老款李宁拍，老毛病）自用的，放心入手，非修复拍，非真假/暗伤不退不换，包邮（偏远地区除外），自提可优惠，有兴趣可私聊。价格可聊",
       "condition_evidence": []
+    },
+    {
+      "price": 599.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "风刃900i 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 614.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "风刃900i 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 590.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "风刃900i 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 550.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "风刃900i 二手球拍",
+      "condition_evidence": []
+    },
+    {
+      "price": 699.0,
+      "condition": "",
+      "condition_claimed": null,
+      "condition_score": null,
+      "condition_severe": false,
+      "sold_time": null,
+      "days_to_sell": null,
+      "title": "风刃900i 二手球拍",
+      "condition_evidence": []
     }
   ],
-  "exported_at": "2026-06-14T23:03:36.413727"
+  "exported_at": "2026-06-17T19:13:46.939779"
 }

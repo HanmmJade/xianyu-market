@@ -1,6 +1,6 @@
 {
   "model": "天斧77PRO",
-  "total_sales": 58,
+  "total_sales": 63,
   "by_condition": [
     {
       "condition": "",
@@ -24,6 +24,14 @@
       "avg_price": 1022.0,
       "min_price": 199.0,
       "max_price": 3180.0,
+      "avg_days": null
+    },
+    {
+      "condition": "未知",
+      "count": 5,
+      "avg_price": 891.0,
+      "min_price": 850.0,
+      "max_price": 920.0,
       "avg_days": null
     },
     {
@@ -636,5 +644,5 @@
       ]
     }
   ],
-  "exported_at": "2026-06-14T23:03:36.303684"
+  "exported_at": "2026-06-17T19:13:46.805749"
 }
