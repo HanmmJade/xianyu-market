@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="闲鱼二手羽毛球拍市场价格监控，实时追踪YONEX、李宁、VICTOR等品牌球拍行情">
+<meta name="keywords" content="羽毛球拍,闲鱼,二手,价格监控,YONEX,李宁,VICTOR,天斧,弓箭">
+<meta name="author" content="XianYu Market">
+<meta property="og:title" content="球拍行情价 — 闲鱼二手市场价格监控">
+<meta property="og:description" content="实时追踪二手羽毛球拍市场价格走势">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏸</text></svg>">
 <title>球拍行情价 — 闲鱼二手市场价格监控</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
@@ -18,6 +25,9 @@
   .loading { display: flex; align-items: center; justify-content: center; min-height: 200px; }
   .spinner { width: 40px; height: 40px; border: 4px solid #e5e7eb; border-top-color: #3b82f6; border-radius: 50%; animation: spin 0.8s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
+  @media (max-width: 640px) {
+    .grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
+  }
 </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -131,9 +141,20 @@ function renderBrands() {
 
 function guessBrand(model) {
   const m = model.toUpperCase();
-  if (m.includes('天斧') || m.includes('弓箭') || m.includes('疾光') || m.includes('YONEX') || m.includes('NF') || m.includes('ARC')) return 'YONEX';
-  if (m.includes('风刃') || m.includes('雷霆') || m.includes('战戟') || m.includes('李宁')) return '李宁';
-  if (m.includes('神速') || m.includes('龙牙') || m.includes('极速') || m.includes('VICTOR')) return 'VICTOR';
+  // YONEX
+  if (m.includes('天斧') || m.includes('弓箭') || m.includes('疾光') || 
+      m.includes('YONEX') || m.includes('NF') || m.includes('ARC') || 
+      m.includes('DUORA') || m.includes('VOLTRIC') || m.includes('NANORAY')) return 'YONEX';
+  // 李宁
+  if (m.includes('风刃') || m.includes('雷霆') || m.includes('战戟') || 
+      m.includes('李宁') || m.includes('LINING') || m.includes('突袭') || 
+      m.includes('能量') || m.includes('锋影')) return '李宁';
+  // VICTOR
+  if (m.includes('神速') || m.includes('龙牙') || m.includes('极速') || 
+      m.includes('VICTOR') || m.includes('挑战者') || m.includes('突击') || 
+      m.includes('TK') || m.includes('JS') || m.includes('HX')) return 'VICTOR';
+  // 尤尼克斯（中文别称）
+  if (m.includes('尤尼克斯')) return 'YONEX';
   return '';
 }
 
