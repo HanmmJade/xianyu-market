@@ -1,0 +1,44 @@
+name: 每日自动更新数据
+
+on:
+  schedule:
+    # 每天凌晨2点（UTC时间）= 北京时间10点
+    - cron: '0 2 * * *'
+  workflow_dispatch:  # 支持手动触发
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        
+      - name: 设置Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: 安装依赖
+        run: |
+          pip install -r requirements.txt
+          
+      - name: 运行爬虫更新数据
+        env:
+          XIANYU_HEADLESS: 'true'
+        run: |
+          python main.py pipeline --headless --crawler mtop
+          
+      - name: 复制数据到前端
+        run: |
+          mkdir -p web-app/public/data
+          cp web/data/*.json web-app/public/data/
+          
+      - name: 提交更改
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 自动更新数据 - $(date +'%Y-%m-%d')"
+          file_pattern: |
+            web/data/*.json
+            web-app/public/data/*.json
